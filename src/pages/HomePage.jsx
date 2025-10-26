@@ -27,13 +27,24 @@ const HomePage = () => {
           alt="Penari Lampung" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 flex flex-col justify-center items-start md:items-center px-5 md:px-10 lg:px-0 lg:pl-[10%] text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair mb-4 max-w-2xl lg:max-w-3xl text-left md:text-center lg:text-left">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 flex flex-col justify-center items-center text-white px-5 md:px-10 lg:px-0">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-2xl lg:max-w-3xl text-center leading-tight drop-shadow-lg" 
+          style={{
+            fontFamily: "'Satoshi', 'Clash Display', sans-serif",
+            letterSpacing: '2px',
+            textShadow: '2px 2px 12px rgba(0,0,0,0.5)'
+          }}>
             Lampung Kalcer
           </h1>
           <p className="text-lg md:text-xl font-light max-w-xl lg:max-w-2xl mb-6 text-left md:text-center lg:text-left opacity-90">
             Jelajahi kekayaan budaya, wisata, dan kuliner khas Provinsi Lampung
           </p>
+          {/* <button 
+            onClick={scrollToAbout}
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300"
+          >
+            Mulai Eksplorasi
+          </button> */}
         </div>
       </section>
 
@@ -55,8 +66,8 @@ const HomePage = () => {
       Peta Interaktif Provinsi Lampung
       <span className="absolute bottom-[-10px] left-0 w-16 h-1 bg-gold"></span>
     </h2>
-    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mt-4 mb-12">
-      Klick pada tombol merah di peta interaktif untuk menjelajahi keindahan dan kekayaan budaya setiap daerah di Provinsi Lampung!
+    <p className="text-gray-700 mb-8 font-semibold">
+      KLIK PADA TOMBOL MERAH DI PETA INTERAKTIF UNTUK MENJELAJAHI KEINDAHAN DAN KEKAYAAN BUDAYA SETIAP DAERAH DI PROVINSI LAMPUNG!
     </p>
     <SimpleInteractiveMap />
   </div>
