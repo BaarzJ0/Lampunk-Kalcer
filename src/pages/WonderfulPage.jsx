@@ -1,110 +1,157 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import gajah from "../assets/gajah.png";
+import telukKiluan from "../assets/teluk_kiluan.png";
+import pulauPahawang from "../assets/pulau_pahawang.png";
 
-const WonderfulPage = () => {
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 500);
-      
-      return () => clearTimeout(timer);
-    }, []);
-    
-    const handleCardClick = () => {
-      alert('Fitur detail akan segera tersedia!');
-    };
+const WonderfulLampung = () => {
+  return (
+    <div
+      style={{
+        maxWidth: 900,
+        margin: "40px auto",
+        fontFamily: "'Georgia', serif",
+        color: "#2e2e2e",
+        backgroundColor: "#b0b49f", // hijau abu lembut sesuai gambar
+        padding: "40px 30px",
+        borderRadius: 8,
+      }}
+    >
+      {/* Judul utama */}
+      <h1
+        style={{
+          fontSize: 28,
+          fontWeight: "bold",
+          marginBottom: 24,
+          fontFamily: "'Georgia', serif",
+        }}
+      >
+        Wonderful of Lampung
+      </h1>
 
-    if (loading) {
-      return (
-        <div className="py-20 px-5 md:px-10 max-w-6xl mx-auto text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red mx-auto mb-4"></div>
-          <p className="text-text-light">Memuat konten...</p>
-        </div>
-      );
-    }
-  
-    return (
-      <div className="py-20 px-5 md:px-10 max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-playfair font-bold text-dark-red mb-8 relative inline-block">
-          Wonderful Lampung
-          <span className="absolute bottom-[-10px] left-0 w-16 h-1 bg-gold"></span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          <div className="content-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
-            <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-              alt="Pantai Lampung" 
-              className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Pantai Indah</h3>
-              <p className="text-text-light leading-relaxed mb-4">Nikmati keindahan pantai-pantai eksotis di Lampung dengan pasir putih dan air biru jernih</p>
-              <button 
-                onClick={handleCardClick}
-                className="btn btn-gold text-sm py-2 px-4"
-              >
-                Jelajahi
-              </button>
-            </div>
-          </div>
-          
-          <div className="content-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
-            <img 
-              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-              alt="Gunung Lampung" 
-              className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Gunung Bersejarah</h3>
-              <p className="text-text-light leading-relaxed mb-4">Jelajahi keindahan alam pegunungan dengan sejarah panjang di Lampung</p>
-              <button 
-                onClick={handleCardClick}
-                className="btn btn-gold text-sm py-2 px-4"
-              >
-                Jelajahi
-              </button>
-            </div>
-          </div>
-          
-          <div className="content-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
-            <img 
-              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-              alt="Taman Nasional" 
-              className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Taman Nasional</h3>
-              <p className="text-text-light leading-relaxed mb-4">Temukan keanekaragaman hayati di taman nasional Way Kambas dan Bukit Barisan Selatan</p>
-              <button 
-                onClick={handleCardClick}
-                className="btn btn-gold text-sm py-2 px-4"
-              >
-                Jelajahi
-              </button>
-            </div>
-          </div>
-          
-          <div className="content-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
-            <img 
-              src="https://images.unsplash.com/photo-1507525428034-b723a9ce6890?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-              alt="Pulau Pahawang" 
-              className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Pulau Tropis</h3>
-              <p className="text-text-light leading-relaxed mb-4">Kunjungi pulau-pulau tropis seperti Pahawang dan Kelagian untuk snorkeling dan diving</p>
-              <button 
-                onClick={handleCardClick}
-                className="btn btn-gold text-sm py-2 px-4"
-              >
-                Jelajahi
-              </button>
-            </div>
-          </div>
-        </div>
+      {/* Paragraf pembuka */}
+      <p
+        style={{
+          fontSize: 16,
+          lineHeight: 1.6,
+          marginBottom: 24,
+          fontFamily: "'Arial', sans-serif",
+        }}
+      >
+        "Wonderful Lampung" adalah sebuah mosaik keindahan yang autentik. Dari puncak gunung berapi legendaris hingga ke dalam teluk yang magis, dari tenunan benang emas yang rumit hingga aksara kuno yang unik. Di sinilah petualangan bertemu tradisi. Di sinilah kemegahan alam berpadu dengan kearifan lokal. Temukan keajaiban Anda di Tanah Lampung.
+      </p>
+      <p
+        style={{
+          fontSize: 16,
+          lineHeight: 1.6,
+          marginBottom: 32,
+          fontFamily: "'Arial', sans-serif",
+        }}
+      >
+        Lampung tidak hanya kaya akan budaya, tetapi juga dianugerahi keindahan alam yang spektakuler. Dari puncak gunung berapi legendaris hingga kawanan lumba-lumba di teluk tersembunyi, "Sai Bumi Rwa Jurai" menawarkan pengalaman tak terlupakan.
+      </p>
+
+      {/* Gambar utama */}
+      <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <img
+          src={gajah}
+          alt="Gajah"
+          style={{
+            maxWidth: "100%",
+            borderRadius: 8,
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          }}
+        />
       </div>
-    );
-  };
-  
-  export default WonderfulPage;
+
+      {/* Taman Nasional Way Kambas */}
+      <section
+        style={{
+          backgroundColor: "#9ea48a",
+          padding: 24,
+          borderRadius: 8,
+          marginBottom: 40,
+          color: "#1f1f1f",
+          fontFamily: "'Arial', sans-serif",
+        }}
+      >
+        <h2 style={{ fontWeight: "bold", fontSize: 20, marginBottom: 12 }}>
+          Taman Nasional Way Kambas (TNWK)
+        </h2>
+        <p style={{ lineHeight: 1.6 }}>
+          Taman Nasional Way Kambas adalah salah satu taman nasional tertua di Indonesia dan rumah bagi satwa-satwa langka yang terancam punah. Tempat ini menjadi pusat konservasi utama untuk Gajah Sumatera. Selain gajah, TNWK juga menjadi habitat bagi Badak Sumatera, Harimau Sumatera, dan berbagai jenis satwa liar lainnya. Ini adalah destinasi wajib bagi pecinta alam dan mereka yang ingin melihat upaya pelestarian satwa ikonik Indonesia.
+        </p>
+      </section>
+
+      {/* Teluk Kiluan */}
+      <section
+        style={{
+          display: "flex",
+          gap: 24,
+          marginBottom: 40,
+          alignItems: "center",
+          fontFamily: "'Arial', sans-serif",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <h3 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 12 }}>
+            Teluk Kiluan
+          </h3>
+          <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
+            Terletak di Kabupaten Tanggamus, Teluk Kiluan adalah sebuah teluk mempesona yang menghadap langsung ke Samudera Hindia. Tempat ini terkenal sebagai spot terbaik untuk melihat lumba-lumba liar di habitat aslinya.
+          </p>
+          <p style={{ lineHeight: 1.6 }}>
+            Pengalaman magis berburu fajar dengan perahu Jukung (perahu tradisional) untuk menyaksikan ratusan lumba-lumba hitam hidung botol dan lumba-lumba paruh panjang melompat bebas di lautan lepas. Laguna Geyu (Laguna Tersembunyi) menawarkan tempat berenang pribadi dengan pemandangan laut lepas.
+          </p>
+        </div>
+        <div style={{ flex: 1 }}>
+          <img
+            src={telukKiluan}
+            alt="Lumba-lumba di Teluk Kiluan"
+            style={{
+              width: "100%",
+              borderRadius: 8,
+              boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Pulau Pahawang */}
+      <section
+        style={{
+          display: "flex",
+          gap: 24,
+          marginBottom: 40,
+          alignItems: "center",
+          fontFamily: "'Arial', sans-serif",
+          flexDirection: "row-reverse",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <h3 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 12 }}>
+            Pulau Pahawang
+          </h3>
+          <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
+            Bagi pecinta pantai dan snorkeling, Pulau Pahawang di Kabupaten Pesawaran adalah surga utama. Destinasi island-hopping paling populer di Lampung ini dikelilingi oleh perairan biru toska yang jernih dan terumbu karang yang indah.
+          </p>
+          <p style={{ lineHeight: 1.6 }}>
+            Menjelajahi berbagai spot foto bawah laut, termasuk gugusan dan candi buatan yang kini menjadi rumah bagi ikan-ikan hias.
+          </p>
+        </div>
+        <div style={{ flex: 1 }}>
+          <img
+            src={pulauPahawang}
+            alt="Pantai Pulau Pahawang"
+            style={{
+              width: "100%",
+              borderRadius: 8,
+              boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
+            }}
+          />
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default WonderfulLampung;

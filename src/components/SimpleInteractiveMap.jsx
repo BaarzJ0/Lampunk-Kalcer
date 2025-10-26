@@ -22,12 +22,6 @@ const SimpleInteractiveMapResponsive = () => {
 
   return (
     <div style={{ maxWidth: 900, margin: '40px auto', padding: '0 16px', fontFamily: "'Marcellus', serif" }}>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#7b1919', marginBottom: 8 }}>
-        Peta Interaktif Provinsi Lampung
-      </h1>
-      <p style={{ fontWeight: 600, color: '#2c3e50', marginBottom: 24 }}>
-        Klik pada tombol merah di peta interaktif untuk menjelajahi keindahan dan kekayaan budaya setiap daerah di Provinsi Lampung!
-      </p>
 
       <div style={{
         position: 'relative',
