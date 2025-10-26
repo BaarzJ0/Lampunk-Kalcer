@@ -20,32 +20,45 @@ const highlights = [
     label: "DRESSES",
     bg: "bg-red-100",
     text: "text-black",
+    target: "dresses",
   },
   {
     img: "/highlight2.png", // Food
     label: "FOOD",
     bg: "bg-red-300",
     text: "text-black",
+    target: "food",
   },
   {
     img: "/highlight3.png", // Destination
     label: "DESTINATION",
     bg: "bg-red-400",
     text: "text-black",
+    target: "destination",
   },
   {
     img: "/highlight4.png", // Languages
-    label: "LANGUANGES",
+    label: "LANGUAGES",
     bg: "bg-red-700",
     text: "text-white",
+    target: "languages",
   },
   {
     img: "/highlight5.png", // Legacy
     label: "LEGACY",
     bg: "bg-red-900",
     text: "text-white",
+    target: "legacy",
   },
 ];
+
+// Fungsi scroll smooth ke section
+const scrollToSection = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 const AboutGallery = () => {
   return (
@@ -126,18 +139,24 @@ const AboutGallery = () => {
       {/* HIGHLIGHTS */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-black mb-4 text-center tracking-wide" style={{ fontFamily: "'Cinzel', serif" }}>
-          HIGHLIGHTS OF WEBSITE LAMPUNK KALCER
+          HIGHLIGHTS OF WEBSITE LAMPUNG KALCER
         </h3>
         <div className="flex flex-col gap-4">
           {highlights.map((item, idx) => (
-            <div key={idx} className={`flex items-stretch rounded overflow-hidden shadow ${item.bg}`}>
+            <button
+              key={idx}
+              type="button"
+              onClick={() => scrollToSection(item.target)}
+              className={`flex items-stretch rounded overflow-hidden shadow transition hover:scale-105 focus:outline-none ${item.bg} ${item.text}`}
+              style={{ cursor: "pointer" }}
+            >
               <div className="w-[180px] h-[110px] flex-shrink-0 bg-white flex items-center justify-center">
                 <img src={item.img} alt={item.label} className="object-cover w-full h-full" />
               </div>
-              <div className={`flex-1 flex items-center justify-center ${item.text} text-xl font-medium tracking-wide`} style={{ fontFamily: "'Cinzel', serif" }}>
+              <div className={`flex-1 flex items-center justify-center text-xl font-medium tracking-wide`} style={{ fontFamily: "'Cinzel', serif" }}>
                 {item.label}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
