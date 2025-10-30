@@ -1,6 +1,6 @@
 import React from "react";
 
-const LampungUtara = () => {
+const LampungBarat = () => {
   return (
     <div
       style={{
@@ -27,7 +27,7 @@ const LampungUtara = () => {
           fontWeight: 600,
         }}
       >
-        Lampung Utara
+        Lampung Barat
       </p>
 
       {/* Judul utama */}
@@ -43,14 +43,14 @@ const LampungUtara = () => {
           fontFamily: "'Cinzel', serif",
         }}
       >
-        Welcome to Lampung Utara
+        Welcome to Lampung Barat
       </h1>
 
       {/* Gambar utama */}
       <div style={{ textAlign: "center", marginBottom: 12 }}>
         <img
-          src="/TuguLamut.png"
-          alt="The Gold Spear Monument"
+          src="/lambar.png"
+          alt="Land Above the Clouds"
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -70,12 +70,12 @@ const LampungUtara = () => {
           color: "#b31217",
         }}
       >
-        The Gold Spear Monument (Tugu Lamut)
+        Land Above the Clouds
       </p>
 
       {/* Deskripsi singkat */}
       <p style={{ fontSize: 15, marginBottom: 18 }}>
-        Lampung Utara adalah salah satu kabupaten tertua di Provinsi Lampung, dikenal sebagai "Gerbang Sumatera Selatan". Wilayah ini kaya akan sejarah, budaya, dan keindahan alam. Tugu Lamut sebagai ikon kota menggambarkan semangat dan kejayaan masyarakat Lampung Utara.
+        Lampung Barat atau biasa disebut "Negeri di Atas Awan". Julukan magis ini melekat erat pada Liwa, ibu kota kabupaten, yang terletak di dataran tinggi Bukit Barisan Selatan. Di pagi hari, kota ini seringkali diselimuti lautan kabut tebal, menciptakan ilusi menakjubkan seolah bangunan dan masjid ikonik di pusat kota mengambang di atas awan. Hawa sejuk dan pemandangan spektakuler ini adalah identitas dan daya tarik utama "Bumi Sekala Behak".
       </p>
 
       {/* The Culture */}
@@ -103,10 +103,10 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/TarianRaja.png"
-          alt="Tarian Raja"
+          src="/pepadun.png"
+          alt="Adat Pepadun"
           style={{
-            width: 160,
+            width: 180,
             height: "auto",
             borderRadius: 6,
             boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
@@ -115,10 +115,10 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tarian Raja
+            Adat Pepadun
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Tarian Raja adalah tarian tradisional yang biasanya dipentaskan dalam upacara adat dan penyambutan tamu kehormatan. Gerakannya anggun dan penuh makna, melambangkan kebesaran dan keagungan budaya Lampung Utara.
+            Lampung Barat adalah salah satu penjaga utama keluhuran Adat Pepadun. Tradisi ini masih mengakar kuat dalam kehidupan masyarakat. Prosesi Begawi Cakak Pepadun, sebuah upacara sakral untuk pemberian gelar dan kenaikan status adat, masih rutin dilaksanakan dengan khidmat dan megah. Kemewahan pakaian adat, kentalnya ritual, dan tingginya penghormatan terhadap tatanan adat menunjukkan betapa warisan leluhur dijunjung tinggi di sini.
           </p>
         </div>
       </div>
@@ -135,17 +135,17 @@ const LampungUtara = () => {
       >
         <div style={{ textAlign: "right", maxWidth: 260 }}>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Upacara Pepadun
+            Festival Sekura
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Upacara Pepadun adalah prosesi adat untuk mengangkat seseorang menjadi pemimpin adat (penyimbang). Upacara ini sarat dengan nilai-nilai demokrasi, musyawarah, dan gotong royong.
+            Festival Sekura adalah jiwa dari Lampung Barat, sebuah tradisi pesta topeng rakyat yang unik dan paling ditunggu. Diadakan setiap Hari Raya Idul Fitri, ribuan masyarakat turun ke jalan mengenakan sekura (topeng) dengan dua karakter utama: Sekura Kamak (lucu/kotor) dan Sekura Betik (bersih/bagus). Festival ini adalah ledakan suka cita, ajang silaturahmi massal, dan ungkapan rasa syukur yang otentik dan meriah, di mana semua orang berpesta bersama.
           </p>
         </div>
         <img
-          src="/UpacaraPepadun.png"
-          alt="Upacara Pepadun"
+          src="/topeng-lampung.png"
+          alt="Festival Sekura"
           style={{
-            width: 160,
+            width: 180,
             height: "auto",
             borderRadius: 6,
             boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
@@ -165,10 +165,10 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/Terapang.png"
-          alt="Terapang"
+          src="/bawang-bakung.png"
+          alt="Bukit Bawang Bakung"
           style={{
-            width: 80,
+            width: 180,
             height: "auto",
             borderRadius: 6,
             boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
@@ -177,10 +177,10 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Terapang
+            Bukit Bawang Bakung
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Terapang adalah keris khas Lampung Utara yang menjadi simbol keberanian dan kehormatan. Senjata tradisional ini sering digunakan dalam upacara adat dan diwariskan secara turun-temurun.
+            Bagi para pemburu matahari terbit dan pecinta pemandangan, bukit-bukit di sekitar Liwa adalah surga tersembunyi. Lokasi seperti Bukit Barang Bareng atau Geredai menjadi titik berkemah favorit untuk menyaksikan secara langsung fenomena "Negeri di Atas Awan". Dari puncak-puncak ini, terhampar pemandangan 360 derajat Kota Liwa, lembah yang hijau, dan lautan kabut yang perlahan tersibak oleh mentari pagi.
           </p>
         </div>
       </div>
@@ -195,10 +195,10 @@ const LampungUtara = () => {
           marginBottom: 24,
         }}
       >
-        Lampung Utara, tanah penuh sejarah, budaya, dan harmoni.
+        Lampung Barat, tanah 'Sekala Behak', sejuknya alam, dan luhurnya adat.
       </p>
     </div>
   );
 };
 
-export default LampungUtara;
+export default LampungBarat;

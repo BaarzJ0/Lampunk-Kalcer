@@ -5,24 +5,28 @@ import pulauPahawang from "../assets/pulau_pahawang.png";
 
 const WonderfulLampung = () => {
   return (
+
     <div
       style={{
         maxWidth: 900,
         margin: "40px auto",
         fontFamily: "'Georgia', serif",
         color: "#2e2e2e",
-        backgroundColor: "#b0b49f", // hijau abu lembut sesuai gambar
+        backgroundColor: "#ffffff", // hijau abu lembut sesuai gambar
         padding: "40px 30px",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
         borderRadius: 8,
       }}
+      
     >
       {/* Judul utama */}
       <h1
         style={{
           fontSize: 28,
-          fontWeight: "bold",
+          fontWeight: "semi-bold",
           marginBottom: 24,
-          fontFamily: "'Georgia', serif",
+          fontFamily: "'Cinzel', serif",
+          color: "#810d11ff",
         }}
       >
         Wonderful of Lampung
@@ -66,7 +70,7 @@ const WonderfulLampung = () => {
       {/* Taman Nasional Way Kambas */}
       <section
         style={{
-          backgroundColor: "#9ea48a",
+          // backgroundColor: "#9ea48a",
           padding: 24,
           borderRadius: 8,
           marginBottom: 40,
@@ -74,7 +78,7 @@ const WonderfulLampung = () => {
           fontFamily: "'Arial', sans-serif",
         }}
       >
-        <h2 style={{ fontWeight: "bold", fontSize: 20, marginBottom: 12 }}>
+        <h2 style={{ fontWeight: "bold", fontSize: 20, fontFamily: "'Cinzel', serif", color: "#810d11ff",  marginBottom: 12 }}>
           Taman Nasional Way Kambas (TNWK)
         </h2>
         <p style={{ lineHeight: 1.6 }}>
@@ -93,7 +97,7 @@ const WonderfulLampung = () => {
         }}
       >
         <div style={{ flex: 1 }}>
-          <h3 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 12 }}>
+          <h3 style={{ fontWeight: "bold", fontSize: 18, fontFamily: "'Cinzel', serif", color: "#810d11ff", marginBottom: 12 }}>
             Teluk Kiluan
           </h3>
           <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
@@ -128,7 +132,7 @@ const WonderfulLampung = () => {
         }}
       >
         <div style={{ flex: 1 }}>
-          <h3 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 12 }}>
+          <h3 style={{ fontWeight: "bold", fontSize: 18, fontFamily: "'Playfair Display', serif", color: "#810d11ff", marginBottom: 12 }}>
             Pulau Pahawang
           </h3>
           <p style={{ lineHeight: 1.6, marginBottom: 12 }}>

@@ -28,8 +28,8 @@ const Navbar = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 pt-10 pb-6">
         {/* Judul */}
         <div className="mb-4 md:mb-0">
-          <div className="text-[2.5rem] leading-[2.8rem] font-normal text-black" style={{ fontFamily: 'Cinzel, serif' }}>
-            LAMPUNK<br />KALCER
+          <div className="text-[2.5rem] leading-[2.8rem] font-normal text-black" style={{ fontFamily: 'Cinzel, serif'}}>
+            LAMPOENK<br />KALCER
           </div>
         </div>
         {/* Search */}

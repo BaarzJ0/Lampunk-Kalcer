@@ -1,6 +1,6 @@
 import React from "react";
 
-const LampungUtara = () => {
+const LampungSelatan = () => {
   return (
     <div
       style={{
@@ -27,7 +27,7 @@ const LampungUtara = () => {
           fontWeight: 600,
         }}
       >
-        Lampung Utara
+        Lampung Selatan
       </p>
 
       {/* Judul utama */}
@@ -43,14 +43,14 @@ const LampungUtara = () => {
           fontFamily: "'Cinzel', serif",
         }}
       >
-        Welcome to Lampung Utara
+        Welcome to Lampung Selatan
       </h1>
 
       {/* Gambar utama */}
       <div style={{ textAlign: "center", marginBottom: 12 }}>
         <img
-          src="/TuguLamut.png"
-          alt="The Gold Spear Monument"
+          src="/menara-siger.png"
+          alt="Menara Siger"
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -70,12 +70,12 @@ const LampungUtara = () => {
           color: "#b31217",
         }}
       >
-        The Gold Spear Monument (Tugu Lamut)
+        Menara Siger
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18 }}>
-        Lampung Utara adalah salah satu kabupaten tertua di Provinsi Lampung, dikenal sebagai "Gerbang Sumatera Selatan". Wilayah ini kaya akan sejarah, budaya, dan keindahan alam. Tugu Lamut sebagai ikon kota menggambarkan semangat dan kejayaan masyarakat Lampung Utara.
+      <p style={{ fontSize: 15, marginBottom: 18, }}>
+        Lampung Selatan adalah kabupaten yang terletak di ujung selatan Provinsi Lampung dan dikenal sebagai "Gerbang Pulau Sumatera". Daerah ini memiliki peranan penting sebagai pintu masuk utama melalui Pelabuhan Bakauheni yang ikonik. Selain kekayaan sejarah dan peran strategisnya, Lampung Selatan juga terkenal akan keindahan alamnya, warisan budaya, dan kearifan lokal masyarakat pesisir. Dari ikon legendaris seperti Menara Siger hingga tradisi adat yang masih lestari, Lampung Selatan memancarkan semangat keterbukaan, keberagaman, dan kemajuan masyarakat Lampung selatan masa kini.
       </p>
 
       {/* The Culture */}
@@ -103,8 +103,8 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/TarianRaja.png"
-          alt="Tarian Raja"
+          src="/tari-sigeh.png"
+          alt="Tari Sigeh"
           style={{
             width: 160,
             height: "auto",
@@ -115,10 +115,10 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tarian Raja
+            Tarian Sigeh
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Tarian Raja adalah tarian tradisional yang biasanya dipentaskan dalam upacara adat dan penyambutan tamu kehormatan. Gerakannya anggun dan penuh makna, melambangkan kebesaran dan keagungan budaya Lampung Utara.
+            Tari Sigeh adalah tarian tradisional khas Lampung yang dipentaskan untuk menyambut tamu kehormatan dan dalam upacara adat. Gerakannya yang anggun dan lembut melambangkan penghormatan, keramahan, dan kegembiraan masyarakat Lampung dalam menerima tamu.
           </p>
         </div>
       </div>
@@ -135,15 +135,15 @@ const LampungUtara = () => {
       >
         <div style={{ textAlign: "right", maxWidth: 260 }}>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Upacara Pepadun
+            Tari Halibambang
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Upacara Pepadun adalah prosesi adat untuk mengangkat seseorang menjadi pemimpin adat (penyimbang). Upacara ini sarat dengan nilai-nilai demokrasi, musyawarah, dan gotong royong.
+          <p style={{ fontSize: 14, margin: "6px 0 0 0",}}>
+          Tari Halibambang adalah tarian tradisional Lampung, khususnya dari masyarakat adat Saibatin (Sekala Brak). Nama "Halibambang" berarti "kupu-kupu", dan tarian ini menggambarkan gerakan anggun kupu-kupu yang terbang. Tarian ini melambangkan kesopanan, keindahan, dan keagungan gadis Lampung, yang awalnya dipentaskan dalam pesta adat dan pernikahan.
           </p>
         </div>
         <img
-          src="/UpacaraPepadun.png"
-          alt="Upacara Pepadun"
+          src="/tari-halibambang.png"
+          alt="Tari Halibambang"
           style={{
             width: 160,
             height: "auto",
@@ -165,10 +165,10 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/Terapang.png"
-          alt="Terapang"
+          src="/tuping.png"
+          alt="Tuping"
           style={{
-            width: 80,
+            width: 160,
             height: "auto",
             borderRadius: 6,
             boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
@@ -177,10 +177,11 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Terapang
+            Tuping
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Terapang adalah keris khas Lampung Utara yang menjadi simbol keberanian dan kehormatan. Senjata tradisional ini sering digunakan dalam upacara adat dan diwariskan secara turun-temurun.
+            Tari Tuping adalah drama tari tradisional dari Lampung Selatan yang menggunakan topeng (disebut tupping). Tarian ini awalnya menggambarkan 12 pasukan gerilya Pahlawan Radin Intan II yang menyamar untuk melawan penjajah. Gerakannya teatrikal dan gagah, melambangkan semangat patriotisme dan kepahlawanan.
+
           </p>
         </div>
       </div>
@@ -195,10 +196,11 @@ const LampungUtara = () => {
           marginBottom: 24,
         }}
       >
-        Lampung Utara, tanah penuh sejarah, budaya, dan harmoni.
+        
+        Lampung Selatan, tanah sang gerbang Sumatera, penuh pesona bahari dan warisan adat.
       </p>
     </div>
   );
 };
 
-export default LampungUtara;
+export default LampungSelatan;

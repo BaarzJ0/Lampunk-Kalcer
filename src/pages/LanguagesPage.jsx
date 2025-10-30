@@ -23,10 +23,10 @@ const LanguageAndFoodLampung = () => {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #b31217 0%, #e52d27 100%)",
+        background: "linear-gradient(135deg, #ffffff 0%, #ffffff 100%)",
         fontFamily: "'Georgia', serif",
         margin: 0,
-        padding: 0,
+        padding: 5,
       }}
     >
       <div
@@ -44,7 +44,7 @@ const LanguageAndFoodLampung = () => {
           style={{
             fontSize: 32,
             fontWeight: "bold",
-            color: "#b31217",
+            color: "#810d11ff",
             marginBottom: 12,
             letterSpacing: "1px",
             textAlign: "center",
@@ -73,7 +73,7 @@ const LanguageAndFoodLampung = () => {
             alignItems: "center",
             gap: 32,
             marginBottom: 48,
-            background: "#fff5f5",
+            background: "#ffffff",
             borderRadius: 12,
             padding: 24,
             boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
@@ -84,7 +84,7 @@ const LanguageAndFoodLampung = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: 22,
-                color: "#b31217",
+                color: "#810d11ff",
                 marginBottom: 12,
                 fontFamily: "'Playfair Display', serif",
               }}
@@ -96,7 +96,7 @@ const LanguageAndFoodLampung = () => {
             </p>
             <div
               style={{
-                background: "#ffeaea",
+                background: "#810d11ff",
                 borderRadius: 8,
                 padding: 12,
                 marginBottom: 8,
@@ -105,14 +105,14 @@ const LanguageAndFoodLampung = () => {
             >
               <table style={{ width: "100%", fontSize: 15, borderCollapse: "collapse" }}>
                 <thead>
-                  <tr style={{ color: "#b31217", fontWeight: "bold", borderBottom: "2px solid #b31217" }}>
+                  <tr style={{ color: "#ffffff", fontWeight: "bold", borderBottom: "2px solid #ffffff" }}>
                     <td style={{ padding: "6px 12px", textAlign: "left" }}>Indonesia</td>
                     <td style={{ padding: "6px 12px", textAlign: "left" }}>Lampung</td>
                   </tr>
                 </thead>
                 <tbody>
                   {vocabLampung.map((row, idx) => (
-                    <tr key={idx} style={{ borderBottom: idx !== vocabLampung.length - 1 ? "1px solid #f0caca" : "none" }}>
+                    <tr key={idx} style={{ borderBottom: idx !== vocabLampung.length - 1 ? "1px solid #f0caca" : "none", color: "#ffffff", }}>
                       <td style={{ padding: "6px 12px" }}>{row.indo}</td>
                       <td style={{ padding: "6px 12px" }}>{row.lampung}</td>
                     </tr>
@@ -120,7 +120,7 @@ const LanguageAndFoodLampung = () => {
                 </tbody>
               </table>
             </div>
-            <p style={{ fontSize: 13, color: "#b31217", marginTop: 4 }}>
+            <p style={{ fontSize: 13, color: "#810d11ff", marginTop: 4 }}>
               *Ayo belajar sapaan sederhana dalam bahasa Lampung!
             </p>
           </div>
@@ -137,7 +137,7 @@ const LanguageAndFoodLampung = () => {
                 padding: 8,
               }}
             />
-            <div style={{ fontSize: 13, color: "#b31217", marginTop: 8}}>
+            <div style={{ fontSize: 13, color: "#810d11ff", marginTop: 8}}>
               Contoh Tulisan Aksara Lampung
             </div>
           </div>
@@ -146,7 +146,7 @@ const LanguageAndFoodLampung = () => {
         {/* Aksara Lampung */}
         <section
           style={{
-            background: "#fff0f0",
+            background: "#ffffff",
             borderRadius: 12,
             padding: 24,
             marginBottom: 48,
@@ -158,7 +158,7 @@ const LanguageAndFoodLampung = () => {
             style={{
               fontWeight: "bold",
               fontSize: 22,
-              color: "#b31217",
+              color: "#810d11ff",
               marginBottom: 16,
               fontFamily: "'Playfair Display', serif",
               textAlign: "center",
@@ -181,7 +181,7 @@ const LanguageAndFoodLampung = () => {
                 boxShadow: "0 4px 12px rgba(179,18,23,0.15)",
               }}
             />
-            <div style={{ fontSize: 13, color: "#b31217", marginTop: 8 }}>
+            <div style={{ fontSize: 13, color: "#810d11ff", marginTop: 8 }}>
               Contoh aksara dasar dan diakritik Aksara Lampung
             </div>
           </div>
@@ -190,7 +190,7 @@ const LanguageAndFoodLampung = () => {
                {/* Ketik Aksara Lampung Interaktif */}
         <section
   style={{
-    background: "#fff5f5",
+    background: "#ffffff",
     borderRadius: 12,
     padding: 24,
     marginBottom: 48,
@@ -201,7 +201,7 @@ const LanguageAndFoodLampung = () => {
     style={{
       fontWeight: "bold",
       fontSize: 22,
-      color: "#b31217",
+      color: "#810d11ff",
       marginBottom: 16,
       fontFamily: "'Playfair Display', serif",
       textAlign: "center",
@@ -242,7 +242,7 @@ const LanguageAndFoodLampung = () => {
       allowFullScreen
     />
   </div>
-  <p style={{ textAlign: "center", color: "#b31217", marginTop: 12, fontSize: 14 }}>
+  <p style={{ textAlign: "center", color: "#810d11ff", marginTop: 12, fontSize: 14 }}>
     Sumber aplikasi:{" "}
     <a
       href="https://github.com/meizano/ketikAksaraLampung"
@@ -260,7 +260,7 @@ const LanguageAndFoodLampung = () => {
             style={{
               fontWeight: "bold",
               fontSize: 22,
-              color: "#b31217",
+              color: "#810d11ff",
               marginBottom: 24,
               fontFamily: "'Playfair Display', serif",
               textAlign: "center",
@@ -279,7 +279,7 @@ const LanguageAndFoodLampung = () => {
             {/* Seruit */}
             <div
               style={{
-                background: "#fff5f5",
+                background: "#ffffff",
                 borderRadius: 12,
                 boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
                 padding: 18,
@@ -304,7 +304,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#b31217",
+                  color: "#810d11ff",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -321,7 +321,7 @@ const LanguageAndFoodLampung = () => {
             {/* Pindang */}
             <div
               style={{
-                background: "#fff5f5",
+                background: "#ffffff",
                 borderRadius: 12,
                 boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
                 padding: 18,
@@ -346,7 +346,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#b31217",
+                  color: "#810d11ff",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -363,7 +363,7 @@ const LanguageAndFoodLampung = () => {
             {/* Engkak */}
             <div
               style={{
-                background: "#fff5f5",
+                background: "#ffffff",
                 borderRadius: 12,
                 boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
                 padding: 18,
@@ -388,7 +388,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#b31217",
+                  color: "#810d11ff",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -406,7 +406,7 @@ const LanguageAndFoodLampung = () => {
           <p
             style={{
               textAlign: "center",
-              color: "#b31217",
+              color: "#810d11ff",
               fontSize: 15,
               marginTop: 18,
               fontStyle: "italic",

@@ -1,6 +1,6 @@
 import React from "react";
 
-const LampungUtara = () => {
+const LampungTimur = () => {
   return (
     <div
       style={{
@@ -27,7 +27,7 @@ const LampungUtara = () => {
           fontWeight: 600,
         }}
       >
-        Lampung Utara
+        Lampung Timur
       </p>
 
       {/* Judul utama */}
@@ -43,14 +43,14 @@ const LampungUtara = () => {
           fontFamily: "'Cinzel', serif",
         }}
       >
-        Welcome to Lampung Utara
+        Welcome to Lampung Timur
       </h1>
 
       {/* Gambar utama */}
       <div style={{ textAlign: "center", marginBottom: 12 }}>
         <img
-          src="/TuguLamut.png"
-          alt="The Gold Spear Monument"
+          src="/gajah.png"
+          alt="Sumatra's Elephant Sanctuary"
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -70,12 +70,12 @@ const LampungUtara = () => {
           color: "#b31217",
         }}
       >
-        The Gold Spear Monument (Tugu Lamut)
+        Sumatra's Elephant Sanctuary
       </p>
 
       {/* Deskripsi singkat */}
       <p style={{ fontSize: 15, marginBottom: 18 }}>
-        Lampung Utara adalah salah satu kabupaten tertua di Provinsi Lampung, dikenal sebagai "Gerbang Sumatera Selatan". Wilayah ini kaya akan sejarah, budaya, dan keindahan alam. Tugu Lamut sebagai ikon kota menggambarkan semangat dan kejayaan masyarakat Lampung Utara.
+        Lampung Timur adalah kabupaten yang identik dengan konservasi alam, dikenal luas secara internasional sebagai "Benteng Konservasi Gajah Sumatera". Wilayah ini menjadi rumah bagi Taman Nasional Way Kambas, yang telah ditetapkan sebagai ASEAN Heritage Park.
       </p>
 
       {/* The Culture */}
@@ -103,8 +103,8 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/TarianRaja.png"
-          alt="Tarian Raja"
+          src="/tari-melinting.png"
+          alt="Tari Melinting"
           style={{
             width: 160,
             height: "auto",
@@ -115,10 +115,10 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tarian Raja
+            Tari Melinting
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Tarian Raja adalah tarian tradisional yang biasanya dipentaskan dalam upacara adat dan penyambutan tamu kehormatan. Gerakannya anggun dan penuh makna, melambangkan kebesaran dan keagungan budaya Lampung Utara.
+            Tari Melinting adalah tarian klasik yang anggun dan luhur, warisan asli dari Keratuan Melinting di Lampung Timur. Tarian ini awalnya merupakan tarian istana yang sakral, dipentaskan hanya untuk menyambut tamu agung atau dalam upacara adat kerajaan. Dengan gerakan yang gemulai, kostum yang mewah, dan iringan musik tradisional, Tari Melinting memancarkan keagungan dan kekayaan budaya Pesisir Lampung.
           </p>
         </div>
       </div>
@@ -135,15 +135,15 @@ const LampungUtara = () => {
       >
         <div style={{ textAlign: "right", maxWidth: 260 }}>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Upacara Pepadun
+            Tapis Melinting
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Upacara Pepadun adalah prosesi adat untuk mengangkat seseorang menjadi pemimpin adat (penyimbang). Upacara ini sarat dengan nilai-nilai demokrasi, musyawarah, dan gotong royong.
+            Tapis Melinting adalah kain tenun tradisional khas yang menjadi simbol kemewahan dan status sosial masyarakat adat Melinting. Dibuat dengan teknik sulam benang emas atau perak yang rumit di atas kain dasar tenun (seringkali berwarna gelap), tapis ini memiliki motif-motif kuno yang sarat makna, seperti motif alam dan kapal. 
           </p>
         </div>
         <img
-          src="/UpacaraPepadun.png"
-          alt="Upacara Pepadun"
+          src="/kain-tapis.png"
+          alt="Tapis Melinting"
           style={{
             width: 160,
             height: "auto",
@@ -165,10 +165,10 @@ const LampungUtara = () => {
         }}
       >
         <img
-          src="/Terapang.png"
-          alt="Terapang"
+          src="/gajah-way-kambas.png"
+          alt="Gajay Way Kambas"
           style={{
-            width: 80,
+            width: 160,
             height: "auto",
             borderRadius: 6,
             boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
@@ -177,10 +177,10 @@ const LampungUtara = () => {
         />
         <div>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Terapang
+            Denyut Kehidupan Konservasi
           </h3>
           <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
-            Terapang adalah keris khas Lampung Utara yang menjadi simbol keberanian dan kehormatan. Senjata tradisional ini sering digunakan dalam upacara adat dan diwariskan secara turun-temurun.
+            Di luar atraksi dan pusat pelatihan, jantung Way Kambas berdetak di alam liarnya. Taman nasional ini adalah habitat alami di mana kawanan gajah—termasuk anak-anak gajah yang menggemaskan—dapat hidup dan berkembang biak dengan relatif aman. Pemandangan keluarga gajah di habitatnya ini adalah bukti nyata keberhasilan upaya konservasi dan menjadi pengingat betapa pentingnya menjaga rumah bagi satwa-satwa langka Indonesia.
           </p>
         </div>
       </div>
@@ -195,10 +195,10 @@ const LampungUtara = () => {
           marginBottom: 24,
         }}
       >
-        Lampung Utara, tanah penuh sejarah, budaya, dan harmoni.
+        Lampung Timur, suaka sang gajah, warisan budaya, dan harmoni alam.
       </p>
     </div>
   );
 };
 
-export default LampungUtara;
+export default LampungTimur;
