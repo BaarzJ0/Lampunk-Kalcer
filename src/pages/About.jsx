@@ -65,8 +65,8 @@ const AboutGallery = () => {
     <section className="max-w-7xl mx-auto p-6 bg-white">
       {/* Judul utama */}
       <h1
-        className="text-4xl font-extrabold text-black mb-10 text-center"
-        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1 }}
+        className="text-4xl font-normal text-black mb-10 text-center"
+        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1, color: "#810d11ff" }}
       >
         WHAT IS LAMPUNG?
       </h1>

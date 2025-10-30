@@ -52,7 +52,7 @@ const LampungUtara = () => {
           src="/TuguLamut.png"
           alt="The Gold Spear Monument"
           style={{
-            maxWidth: "90%",
+            maxWidth: "100%",
             height: "auto",
             borderRadius: 8,
             boxShadow: "0 2px 12px rgba(179,18,23,0.10)",

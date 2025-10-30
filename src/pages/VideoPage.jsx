@@ -9,7 +9,7 @@ const VideoPage = () => {
     <>
       <h1
         className="text-4xl font-extrabold text-black mt-10 text-center"
-        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1 }}
+        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1, color: "#810d11ff" }}
       >
         WHAT IS LAMPUNG?
       </h1>
