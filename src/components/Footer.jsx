@@ -7,6 +7,8 @@ const navLinks = [
   { to: '/languages', label: 'Languanges & Food' },
   { to: '/dresses', label: 'Dresses' },
   { to: '/video', label: 'Discover Video' },
+  { to: '/berita', label: 'Berita' },
+  { to: '/login', label: 'Login' }, // <-- Tambahkan ini
 ];
 
 const Footer = () => {

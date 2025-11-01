@@ -24,9 +24,10 @@ const LanguageAndFoodLampung = () => {
       style={{
         minHeight: "100vh",
         background: "linear-gradient(135deg, #ffffff 0%, #ffffff 100%)",
-        fontFamily: "'Georgia', serif",
+        fontFamily: "'Playfair Display', serif",
         margin: 0,
         padding: 5,
+        color: "#333",
       }}
     >
       <div
@@ -44,11 +45,10 @@ const LanguageAndFoodLampung = () => {
           style={{
             fontSize: 32,
             fontWeight: "bold",
-            color: "#810d11ff",
+            color: "#810d11",
             marginBottom: 12,
             letterSpacing: "1px",
             textAlign: "center",
-            fontFamily: "'Playfair Display', serif",
           }}
         >
           Language & Food of Lampung
@@ -59,7 +59,7 @@ const LanguageAndFoodLampung = () => {
             color: "#444",
             fontSize: 18,
             marginBottom: 32,
-            fontFamily: "'Arial', sans-serif",
+            lineHeight: 1.6,
           }}
         >
           Jelajahi kekayaan bahasa, aksara, dan cita rasa kuliner khas Lampung yang penuh warna dan makna.
@@ -84,19 +84,18 @@ const LanguageAndFoodLampung = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: 22,
-                color: "#810d11ff",
+                color: "#810d11",
                 marginBottom: 12,
-                fontFamily: "'Playfair Display', serif",
               }}
             >
-              Bahasa Lampung
+              APA ITU BAHASA LAMPUNG?
             </h2>
             <p style={{ color: "#333", marginBottom: 16, lineHeight: 1.6 }}>
-              Bahasa Lampung adalah bahasa asli masyarakat Lampung yang kaya akan dialek dan ekspresi unik. Terdapat dua dialek utama, yaitu Lampung Api dan Lampung Nyo, yang digunakan dalam kehidupan sehari-hari di berbagai wilayah Lampung. Bahasa ini juga memiliki aksara sendiri yang disebut Aksara Lampung.
+              Bahasa Lampung adalah sebuah bahasa Austronesia yang dituturkan oleh suku Lampung di Provinsi Lampung dan sekitarnya. Bahasa ini memiliki posisi unik dalam rumpun bahasa Melayu-Polinesia dan menjadi salah satu kekayaan linguistik yang penting di Indonesia. Sama seperti budaya masyarakatnya, bahasanya pun memiliki ciri khas yang membedakannya dari bahasa-bahasa lain di sekitarnya.
             </p>
             <div
               style={{
-                background: "#810d11ff",
+                background: "#810d11",
                 borderRadius: 8,
                 padding: 12,
                 marginBottom: 8,
@@ -112,7 +111,13 @@ const LanguageAndFoodLampung = () => {
                 </thead>
                 <tbody>
                   {vocabLampung.map((row, idx) => (
-                    <tr key={idx} style={{ borderBottom: idx !== vocabLampung.length - 1 ? "1px solid #f0caca" : "none", color: "#ffffff", }}>
+                    <tr
+                      key={idx}
+                      style={{
+                        borderBottom: idx !== vocabLampung.length - 1 ? "1px solid #f0caca" : "none",
+                        color: "#ffffff",
+                      }}
+                    >
                       <td style={{ padding: "6px 12px" }}>{row.indo}</td>
                       <td style={{ padding: "6px 12px" }}>{row.lampung}</td>
                     </tr>
@@ -120,7 +125,7 @@ const LanguageAndFoodLampung = () => {
                 </tbody>
               </table>
             </div>
-            <p style={{ fontSize: 13, color: "#810d11ff", marginTop: 4 }}>
+            <p style={{ fontSize: 13, color: "#810d11", marginTop: 4 }}>
               *Ayo belajar sapaan sederhana dalam bahasa Lampung!
             </p>
           </div>
@@ -137,7 +142,7 @@ const LanguageAndFoodLampung = () => {
                 padding: 8,
               }}
             />
-            <div style={{ fontSize: 13, color: "#810d11ff", marginTop: 8}}>
+            <div style={{ fontSize: 13, color: "#810d11", marginTop: 8 }}>
               Contoh Tulisan Aksara Lampung
             </div>
           </div>
@@ -151,25 +156,60 @@ const LanguageAndFoodLampung = () => {
             padding: 24,
             marginBottom: 48,
             boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
-            fontFamily: "'Arial', sans-serif",
+            fontSize: 16,
+            lineHeight: 1.6,
+            color: "#333",
           }}
         >
           <h2
             style={{
               fontWeight: "bold",
               fontSize: 22,
-              color: "#810d11ff",
+              color: "#810d11",
               marginBottom: 16,
-              fontFamily: "'Playfair Display', serif",
               textAlign: "center",
             }}
           >
             Aksara Lampung
           </h2>
-          <p style={{ lineHeight: 1.6, color: "#333", marginBottom: 16 }}>
-            Aksara Lampung adalah sistem tulisan tradisional yang digunakan untuk menulis bahasa Lampung. Terdiri dari 20 aksara dasar yang disebut <i>kelabai surat</i>, serta tanda diakritik yang disebut <i>benah surat</i> untuk mengubah bunyi vokal. Aksara ini merupakan bagian penting dari warisan budaya Lampung dan masih diajarkan di beberapa sekolah serta digunakan dalam seni dan upacara adat.
-          </p>
-          
+          <div
+            style={{
+              maxWidth: 600,
+              margin: "0 auto",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: 28,
+                marginBottom: 16,
+                color: "#810d11",
+              }}
+            >
+              Aksara Lampung:
+            </h3>
+            <p style={{ marginBottom: 16 }}>
+              Warisan Aksara Kuno Bernama "Had Lampung"
+            </p>
+            <p style={{ marginBottom: 16 }}>
+              Salah satu hal paling istimewa dari Bahasa Lampung adalah kepemilikan aksara tradisionalnya sendiri yang disebut Aksara Lampung atau Had Lampung. Aksara ini merupakan turunan dari aksara Brahmi kuno dari India, yang menyebar ke Nusantara dan berkerabat dengan aksara Batak dan Rejang.
+            </p>
+            <p style={{ marginBottom: 16 }}>
+              Aksara Lampung terdiri dari komponen utama:
+            </p>
+            <ul
+              style={{
+                marginLeft: 20,
+                marginBottom: 24,
+              }}
+            >
+              <li>
+                <b>Kelabai Surat (Induk Huruf):</b> Terdapat 20 induk huruf yang masing-masing mewakili satu konsonan dengan vokal dasar /a/.
+              </li>
+              <li>
+                <b>Benah Surat (Anak Huruf):</b> Ini adalah tanda diakritik (mirip harakat dalam huruf Arab) yang berfungsi untuk mengubah bunyi vokal dari induk huruf (misalnya menjadi /i/, /u/, /e/, /o/) atau untuk menambahkan konsonan tertentu di akhir kata. Terdapat pula tanda untuk mematikan vokal (nengen).
+              </li>
+            </ul>
+          </div>
           <div style={{ textAlign: "center" }}>
             <img
               src={aksaraLampungImg}
@@ -181,88 +221,77 @@ const LanguageAndFoodLampung = () => {
                 boxShadow: "0 4px 12px rgba(179,18,23,0.15)",
               }}
             />
-            <div style={{ fontSize: 13, color: "#810d11ff", marginTop: 8 }}>
+            <div style={{ fontSize: 13, color: "#810d11", marginTop: 8 }}>
               Contoh aksara dasar dan diakritik Aksara Lampung
             </div>
           </div>
         </section>
 
-               {/* Ketik Aksara Lampung Interaktif */}
+        {/* Ketik Aksara Lampung Interaktif */}
         <section
-  style={{
-    background: "#ffffff",
-    borderRadius: 12,
-    padding: 24,
-    marginBottom: 48,
-    boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
-  }}
->
-  <h2
-    style={{
-      fontWeight: "bold",
-      fontSize: 22,
-      color: "#810d11ff",
-      marginBottom: 16,
-      fontFamily: "'Playfair Display', serif",
-      textAlign: "center",
-    }}
-  >
-    Coba Ketik Aksara Lampung
-  </h2>
-  <p style={{ textAlign: "center", color: "#444", marginBottom: 18 }}>
-    Gunakan fitur interaktif di bawah ini untuk menulis dan mengonversi kata/kalimat ke Aksara Lampung secara langsung!
-  </p>
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "2px solid #b31217",
-      borderRadius: 12,
-      boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
-      background: "#fff",
-      marginBottom: 8,
-      overflow: "hidden",
-      minHeight: 520,
-      height: "auto",
-    }}
-  >
-    <iframe
-      src="https://meizano.github.io/ketikAksaraLampung/"
-      title="Ketik Aksara Lampung"
-      width="100%"
-      height="520"
-      style={{
-        border: "none",
-        borderRadius: 12,
-        background: "#fff",
-        minHeight: 520,
-        width: "100%",
-      }}
-      allowFullScreen
-    />
-  </div>
-  <p style={{ textAlign: "center", color: "#810d11ff", marginTop: 12, fontSize: 14 }}>
-    Sumber aplikasi:{" "}
-    <a
-      href="https://github.com/meizano/ketikAksaraLampung"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      meizano/ketikAksaraLampung
-    </a>
-  </p>
-</section
->
+          style={{
+            background: "#ffffff",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 48,
+            boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
+          }}
+        >
+          <h2
+            style={{
+              fontWeight: "bold",
+              fontSize: 22,
+              color: "#810d11",
+              marginBottom: 16,
+              textAlign: "center",
+            }}
+          >
+            Coba Ketik Aksara Lampung
+          </h2>
+          <p style={{ textAlign: "center", color: "#444", marginBottom: 18 }}>
+            Gunakan fitur interaktif di bawah ini untuk menulis dan mengonversi kata/kalimat ke Aksara Lampung secara langsung!
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "2px solid #b31217",
+              borderRadius: 12,
+              boxShadow: "0 2px 8px rgba(179,18,23,0.07)",
+              background: "#fff",
+              marginBottom: 8,
+              overflow: "hidden",
+              minHeight: 520,
+              height: "auto",
+            }}
+          >
+            <iframe
+              src="https://meizano.github.io/ketikAksaraLampung/"
+              title="Ketik Aksara Lampung"
+              width="100%"
+              height="520"
+              style={{
+                border: "none",
+                borderRadius: 12,
+                background: "#fff",
+                minHeight: 520,
+                width: "100%",
+              }}
+              allowFullScreen
+            />
+          </div>
+          
+        </section>
+
         {/* Kuliner Lampung */}
         <section>
           <h2
             style={{
               fontWeight: "bold",
               fontSize: 22,
-              color: "#810d11ff",
+              color: "#810d11",
               marginBottom: 24,
-              fontFamily: "'Playfair Display', serif",
               textAlign: "center",
             }}
           >
@@ -304,7 +333,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#810d11ff",
+                  color: "#810d11",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -346,7 +375,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#810d11ff",
+                  color: "#810d11",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -388,7 +417,7 @@ const LanguageAndFoodLampung = () => {
               />
               <h3
                 style={{
-                  color: "#810d11ff",
+                  color: "#810d11",
                   fontWeight: "bold",
                   fontSize: 17,
                   marginBottom: 6,
@@ -406,7 +435,7 @@ const LanguageAndFoodLampung = () => {
           <p
             style={{
               textAlign: "center",
-              color: "#810d11ff",
+              color: "#810d11",
               fontSize: 15,
               marginTop: 18,
               fontStyle: "italic",

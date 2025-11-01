@@ -8,6 +8,7 @@ const navLinks = [
   { to: '/languages', label: 'Languanges & Food' },
   { to: '/dresses', label: 'Dresses' },
   { to: '/video', label: 'Discover Video' },
+   { to: '/berita', label: 'Berita' },
 ];
 
 const Navbar = () => {

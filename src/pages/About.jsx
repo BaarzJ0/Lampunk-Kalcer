@@ -13,7 +13,6 @@ const photos = [
   "/foto7.png", // kanan bawah besar horizontal
 ];
 
-// Data highlights
 const highlights = [
   {
     img: "/highlight1.png", // Dresses
@@ -62,18 +61,18 @@ const scrollToSection = (id) => {
 
 const AboutGallery = () => {
   return (
-    <section className="max-w-7xl mx-auto p-6 bg-white">
+    <section className="max-w-7xl mx-auto p-6 bg-white font-serif">
       {/* Judul utama */}
       <h1
-        className="text-4xl font-normal text-black mb-10 text-center"
-        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1, color: "#810d11ff" }}
+        className="text-4xl font-normal text-[#810d11] mb-10 text-center"
+        style={{ fontFamily: "'Cinzel', serif", letterSpacing: 1 }}
       >
         WHAT IS LAMPUNG?
       </h1>
 
       {/* Grid Foto */}
       <div
-        className="grid gap-2 mb-2"
+        className="grid gap-2 mb-8"
         style={{
           gridTemplateColumns: "300px 150px 150px 1fr",
           gridTemplateRows: "200px 150px 150px",
@@ -84,44 +83,85 @@ const AboutGallery = () => {
           `,
         }}
       >
-        <img src={photos[0]} alt="" className="w-full h-full object-cover rounded" style={{ gridArea: "foto1" }} />
-        <img src={photos[1]} alt="" className="w-full h-full object-cover rounded" style={{ gridArea: "foto2" }} />
-        <img src={photos[2]} alt="" className="w-full h-full object-cover rounded" style={{ gridArea: "foto3" }} />
-        <img src={photos[3]} alt="" className="w-full h-full object-cover rounded" style={{ gridArea: "foto4" }} />
-        <div style={{ gridArea: "foto5" }} className="grid grid-cols-2 gap-2 rounded overflow-hidden">
+        <img
+          src={photos[0]}
+          alt=""
+          className="w-full h-full object-cover rounded"
+          style={{ gridArea: "foto1" }}
+        />
+        <img
+          src={photos[1]}
+          alt=""
+          className="w-full h-full object-cover rounded"
+          style={{ gridArea: "foto2" }}
+        />
+        <img
+          src={photos[2]}
+          alt=""
+          className="w-full h-full object-cover rounded"
+          style={{ gridArea: "foto3" }}
+        />
+        <img
+          src={photos[3]}
+          alt=""
+          className="w-full h-full object-cover rounded"
+          style={{ gridArea: "foto4" }}
+        />
+        <div
+          style={{ gridArea: "foto5" }}
+          className="grid grid-cols-2 gap-2 rounded overflow-hidden"
+        >
           <img src={photos[4]} alt="" className="w-full h-full object-cover" />
           <img src={photos[5]} alt="" className="w-full h-full object-cover" />
         </div>
-        <img src={photos[6]} alt="" className="w-full h-full object-cover rounded" style={{ gridArea: "foto7" }} />
+        <img
+          src={photos[6]}
+          alt=""
+          className="w-full h-full object-cover rounded"
+          style={{ gridArea: "foto7" }}
+        />
       </div>
+<div
+  className="relative flex justify-center items-center mb-10"
+  style={{ minHeight: 150, overflow: "visible" }}
+>
+  {/* Oval background */}
+  <div
+    className="absolute"
+    style={{
+      background: "#f3d6d6",
+      width: 1500,          // Lebar oval disesuaikan agar tidak terlalu besar
+      height: 150,         // Tinggi oval disesuaikan
+      borderRadius: 9999,
+      left: "0%",
+      top: "50%",
+      transform: "translate(-50%, -50%)",
+      zIndex: 0,
+      pointerEvents: "none", // Agar oval tidak mengganggu interaksi
+    }}
+  />
+  {/* PNG About */}
+  <img
+    src="/about-typo.png" // Ganti dengan path file kamu
+    alt="About"
+    style={{
+      maxWidth: 320,
+      width: "80%",
+      position: "relative",
+      zIndex: 1,
+      marginTop: 10,
+      marginBottom: 10,
+    }}
+  />
+</div>
 
-      {/* Tulisan "About" */}
-      <div className="relative max-w-[300px] mx-auto mb-10">
-        <div
-          className="absolute bg-red-100 rounded-full opacity-60"
-          style={{
-            width: "280px",
-            height: "80px",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%) rotate(-15deg)",
-            zIndex: -1,
-          }}
-        ></div>
-        <h2
-          className="text-5xl font-extrabold text-red-700 text-center"
-          style={{ fontFamily: "'Dancing Script', cursive", lineHeight: 1 }}
-        >
-          About
-        </h2>
-      </div>
 
       {/* Konten About */}
       <article className="max-w-3xl mx-auto text-justify text-gray-800 leading-relaxed prose prose-lg mb-16">
         <p>
           Budaya adalah cara kita hidup, berinteraksi, dan menghargai satu sama lain. Melalui budaya, kita mengenal jati diri serta memahami akar dari mana kita berasal. Website ini hadir untuk mengajak semua orang lebih dekat dengan budaya Lampung—warisan yang kaya akan nilai, simbol, dan filosofi kehidupan.
         </p>
-        <p className="text-red-600 font-semibold">
+        <p className="text-[#a21d1d] font-semibold">
           Sesuai falsafah Sai Bumi Ruwa Jurai, masyarakat adat Lampung terbagi menjadi dua jurai besar, yakni Pepadun dan Saibatin.
         </p>
         <p>
@@ -138,7 +178,10 @@ const AboutGallery = () => {
 
       {/* HIGHLIGHTS */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-black mb-4 text-center tracking-wide" style={{ fontFamily: "'Cinzel', serif" }}>
+        <h3
+          className="text-lg font-semibold text-black mb-4 text-center tracking-wide"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
           HIGHLIGHTS OF WEBSITE LAMPUNG KALCER
         </h3>
         <div className="flex flex-col gap-4">
@@ -151,9 +194,16 @@ const AboutGallery = () => {
               style={{ cursor: "pointer" }}
             >
               <div className="w-[180px] h-[110px] flex-shrink-0 bg-white flex items-center justify-center">
-                <img src={item.img} alt={item.label} className="object-cover w-full h-full" />
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="object-cover w-full h-full"
+                />
               </div>
-              <div className={`flex-1 flex items-center justify-center text-xl font-medium tracking-wide`} style={{ fontFamily: "'Cinzel', serif" }}>
+              <div
+                className={`flex-1 flex items-center justify-center text-xl font-medium tracking-wide`}
+                style={{ fontFamily: "'Cinzel', serif" }}
+              >
                 {item.label}
               </div>
             </button>
