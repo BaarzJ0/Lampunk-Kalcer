@@ -1,30 +1,48 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // 1. Import axios
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // 2. Kita isi state dengan data user Anda agar mudah saat tes
+  const [email, setEmail] = useState('lekemotiga@contoh.com');
+  const [password, setPassword] = useState('admin123');
+  
   const [remember, setRemember] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  // 3. Fungsi ini diganti total untuk memanggil API
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Contoh autentikasi sederhana
-    if (email === 'admin@example.com' && password === 'admin123') {
-      localStorage.setItem('isLoggedIn', 'true');
-      if (remember) {
-        localStorage.setItem('rememberMe', 'true');
+    try {
+      // 4. Kirim request POST ke API Laravel Anda
+      const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+        email: email,
+        password: password
+      });
+
+      // 5. Cek apakah login berhasil dan dapat token
+      if (response.data.access_token) {
+        // 6. Simpan token untuk panggilan API selanjutnya (spt buat berita)
+        localStorage.setItem('authToken', response.data.access_token);
+        
+        // 7. Simpan status login (ini agar PrivateRoute Anda tetap berfungsi)
+        localStorage.setItem('isLoggedIn', 'true'); 
+
+        alert('Login berhasil! Selamat datang, Admin.');
+        navigate('/dashboard'); // Arahkan ke dashboard
       } else {
-        localStorage.removeItem('rememberMe');
+        alert('Login gagal! Token tidak diterima dari server.');
       }
-      alert('Login berhasil! Selamat datang, Admin.');
-      navigate('/dashboard');
-    } else {
+
+    } catch (error) {
+      // 8. Tangani jika terjadi error (misal: password salah, server mati)
+      console.error('Login error:', error);
       alert('Login gagal! Email atau password salah.');
     }
   };
 
+  // 9. Bagian JSX (tampilan) di bawah ini sama persis dengan file asli Anda
   return (
     <div
       style={{

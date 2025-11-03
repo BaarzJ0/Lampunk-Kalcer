@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaHome, FaNewspaper, FaImages } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
+import axios from 'axios'; // <-- 1. Import axios
 
+// Komponen Sidebar (Tidak ada perubahan)
 const Sidebar = () => (
   <aside
     className="w-64 min-h-screen flex flex-col justify-between"
@@ -50,11 +52,13 @@ const Sidebar = () => (
   </aside>
 );
 
+// Komponen Header
 const Header = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("authToken"); // <-- 2. Tambahkan ini agar token juga terhapus
     navigate("/login");
   };
 
@@ -71,7 +75,9 @@ const Header = () => {
   );
 };
 
+// Komponen Utama DashboardNews
 const DashboardNews = () => {
+  // Ini adalah daftar berita "dummy" Anda. Kita akan tambahkan data asli ke sini
   const [newsList, setNewsList] = useState([
     {
       id: 1,
@@ -90,7 +96,7 @@ const DashboardNews = () => {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
-    date: "",
+    date: "", // Ini tetap ada untuk form, tapi tidak kita kirim ke API news
     content: "",
     image: null,
   });
@@ -106,23 +112,61 @@ const DashboardNews = () => {
 
   const handleAddNewClick = () => setShowForm((prev) => !prev);
 
-  const handleSubmit = (e) => {
+  // --- 3. FUNGSI INI DIGANTI TOTAL ---
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.title || !formData.date || !formData.content) {
-      alert("Mohon isi semua field!");
+    if (!formData.title || !formData.content) {
+      alert("Mohon isi Judul dan Konten Berita!");
       return;
     }
-    const newNews = {
-      id: newsList.length + 1,
+
+    // 4. Ambil token dari localStorage
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+      alert("Otentikasi gagal! Silakan login kembali.");
+      return;
+    }
+
+    // 5. Siapkan data yang akan dikirim ke API
+    const apiData = {
       title: formData.title,
-      date: formData.date,
       content: formData.content,
-      image: formData.image,
     };
-    setNewsList((prev) => [newNews, ...prev]);
-    setFormData({ title: "", date: "", content: "", image: null });
-    setShowForm(false);
+
+    try {
+      // 6. Kirim data ke API Laravel Anda dengan header otentikasi
+      const response = await axios.post(
+        'http://127.0.0.1:8000/api/news', // URL API Anda
+        apiData, // Body (data yang dikirim)
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`, // Header wajib untuk rute terproteksi
+            'Accept': 'application/json'
+          }
+        }
+      );
+
+      // 7. Jika sukses, API akan mengembalikan data berita yang baru dibuat
+      alert('Berita berhasil disimpan ke database!');
+      
+      // 8. Tambahkan berita baru (dari server) ke daftar berita di state
+      setNewsList((prev) => [response.data.data, ...prev]);
+      
+      // 9. Reset form dan sembunyikan
+      setFormData({ title: "", date: "", content: "", image: null });
+      setShowForm(false);
+
+    } catch (error) {
+      // 10. Tangani jika ada error
+      console.error('Error saat membuat berita:', error);
+      if (error.response && error.response.status === 401) {
+        alert("Sesi Anda habis. Silakan login kembali.");
+      } else {
+        alert("Terjadi kesalahan. Gagal menyimpan berita.");
+      }
+    }
   };
+  // --- BATAS AKHIR PERUBAHAN ---
 
   const handleReset = () => setFormData({ title: "", date: "", content: "", image: null });
 
@@ -208,11 +252,12 @@ const DashboardNews = () => {
               {newsList.map((news) => (
                 <div key={news.id} className="bg-white p-4 rounded shadow flex gap-4">
                   <div className="w-24 flex-shrink-0 bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-600">
-                    News {news.id}
+                    {/* Jika ada gambar, tampilkan gambar. Jika tidak, tampilkan ID */}
+                    {news.image ? "Gambar" : `News ${news.id}`}
                   </div>
                   <div>
                     <h5 className="font-semibold">{news.title}</h5>
-                    <p className="text-xs text-gray-500">{news.date}</p>
+                    <p className="text-xs text-gray-500">{news.date || new Date(news.created_at).toLocaleDateString('id-ID')}</p>
                     <p className="text-sm">{news.content}</p>
                   </div>
                 </div>
