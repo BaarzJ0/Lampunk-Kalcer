@@ -74,7 +74,7 @@ const LampungTimur = () => {
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18 }}>
+      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
         Lampung Timur adalah kabupaten yang identik dengan konservasi alam, dikenal luas secara internasional sebagai "Benteng Konservasi Gajah Sumatera". Wilayah ini menjadi rumah bagi Taman Nasional Way Kambas, yang telah ditetapkan sebagai ASEAN Heritage Park.
       </p>
 
@@ -117,7 +117,7 @@ const LampungTimur = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tari Melinting
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Tari Melinting adalah tarian klasik yang anggun dan luhur, warisan asli dari Keratuan Melinting di Lampung Timur. Tarian ini awalnya merupakan tarian istana yang sakral, dipentaskan hanya untuk menyambut tamu agung atau dalam upacara adat kerajaan. Dengan gerakan yang gemulai, kostum yang mewah, dan iringan musik tradisional, Tari Melinting memancarkan keagungan dan kekayaan budaya Pesisir Lampung.
           </p>
         </div>
@@ -137,7 +137,7 @@ const LampungTimur = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tapis Melinting
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Tapis Melinting adalah kain tenun tradisional khas yang menjadi simbol kemewahan dan status sosial masyarakat adat Melinting. Dibuat dengan teknik sulam benang emas atau perak yang rumit di atas kain dasar tenun (seringkali berwarna gelap), tapis ini memiliki motif-motif kuno yang sarat makna, seperti motif alam dan kapal. 
           </p>
         </div>
@@ -179,7 +179,7 @@ const LampungTimur = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Denyut Kehidupan Konservasi
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Di luar atraksi dan pusat pelatihan, jantung Way Kambas berdetak di alam liarnya. Taman nasional ini adalah habitat alami di mana kawanan gajah—termasuk anak-anak gajah yang menggemaskan—dapat hidup dan berkembang biak dengan relatif aman. Pemandangan keluarga gajah di habitatnya ini adalah bukti nyata keberhasilan upaya konservasi dan menjadi pengingat betapa pentingnya menjaga rumah bagi satwa-satwa langka Indonesia.
           </p>
         </div>
@@ -193,6 +193,7 @@ const LampungTimur = () => {
           fontStyle: "italic",
           textAlign: "center",
           marginBottom: 24,
+          fontFamily: "'Poppins', sans-serif",
         }}
       >
         Lampung Timur, suaka sang gajah, warisan budaya, dan harmoni alam.

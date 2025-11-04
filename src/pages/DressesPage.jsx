@@ -24,7 +24,7 @@ const DressesPage = () => {
             />
             <div className="p-6">
               <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Siger</h3>
-              <p className="text-text-light leading-relaxed mb-4">
+              <p className="text-text-light leading-relaxed mb-4" style={{fontFamily: 'Poppins, sans-serif'}}> 
                 Siger adalah mahkota keemasan bertingkat yang menjadi simbol keagungan wanita Lampung. Dengan 9 lekukan (Pepadun) atau 7 lekukan (Saibatin), mahkota ini melambangkan filosofi Piil Pesenggiri menjaga harga diri dan kehormatan. Siger kini menjadi ikon Provinsi Lampung yang diabadikan dalam Menara Siger sebagai simbol kebanggaan masyarakat.
               </p>
             </div>
@@ -52,7 +52,7 @@ const DressesPage = () => {
             />
             <div className="p-6">
               <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Pakaian Adat Pria</h3>
-              <p className="text-text-light leading-relaxed mb-4">
+              <p className="text-text-light leading-relaxed mb-4" style={{fontFamily: 'Poppins, sans-serif'}}>
                 Pakaian adat pria Lampung terdiri dari Kaway (baju putih) yang melambangkan kesucian, Sarung Tumpal dari tenun emas, Selikap Jungsarat sebagai selempang bahu, dan Kikat Manuk Meghem sebagai penutup kepala. Dilengkapi dengan Keris yang diselipkan di pinggang, busana ini menciptakan sosok pria Lampung yang gagah, berwibawa, dan berkedudukan tinggi dalam masyarakat adat.
               </p>
             </div>
@@ -66,7 +66,7 @@ const DressesPage = () => {
             />
             <div className="p-6 lg:p-8">
               <h3 className="text-xl font-playfair font-bold text-dark-red mb-3">Aksesoris Tradisional</h3>
-              <p className="text-text-light leading-relaxed mb-4">
+              <p className="text-text-light leading-relaxed mb-4" style={{fontFamily: 'Poppins, sans-serif'}}>
                 Pakaian adat pria Lampung terdiri dari Kaway (baju putih) yang melambangkan kesucian, Sarung Tumpal dari tenun emas, Selikap Jungsarat sebagai selempang bahu, dan Kikat Manuk Meghem sebagai penutup kepala. Dilengkapi dengan Keris yang diselipkan di pinggang, busana ini menciptakan sosok pria Lampung yang gagah, berwibawa, dan berkedudukan tinggi dalam masyarakat adat.
               </p>
             </div>

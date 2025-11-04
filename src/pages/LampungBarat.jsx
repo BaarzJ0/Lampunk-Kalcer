@@ -74,7 +74,7 @@ const LampungBarat = () => {
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18 }}>
+      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
         Lampung Barat atau biasa disebut "Negeri di Atas Awan". Julukan magis ini melekat erat pada Liwa, ibu kota kabupaten, yang terletak di dataran tinggi Bukit Barisan Selatan. Di pagi hari, kota ini seringkali diselimuti lautan kabut tebal, menciptakan ilusi menakjubkan seolah bangunan dan masjid ikonik di pusat kota mengambang di atas awan. Hawa sejuk dan pemandangan spektakuler ini adalah identitas dan daya tarik utama "Bumi Sekala Behak".
       </p>
 
@@ -117,7 +117,7 @@ const LampungBarat = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Adat Pepadun
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Lampung Barat adalah salah satu penjaga utama keluhuran Adat Pepadun. Tradisi ini masih mengakar kuat dalam kehidupan masyarakat. Prosesi Begawi Cakak Pepadun, sebuah upacara sakral untuk pemberian gelar dan kenaikan status adat, masih rutin dilaksanakan dengan khidmat dan megah. Kemewahan pakaian adat, kentalnya ritual, dan tingginya penghormatan terhadap tatanan adat menunjukkan betapa warisan leluhur dijunjung tinggi di sini.
           </p>
         </div>
@@ -137,7 +137,7 @@ const LampungBarat = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Festival Sekura
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Festival Sekura adalah jiwa dari Lampung Barat, sebuah tradisi pesta topeng rakyat yang unik dan paling ditunggu. Diadakan setiap Hari Raya Idul Fitri, ribuan masyarakat turun ke jalan mengenakan sekura (topeng) dengan dua karakter utama: Sekura Kamak (lucu/kotor) dan Sekura Betik (bersih/bagus). Festival ini adalah ledakan suka cita, ajang silaturahmi massal, dan ungkapan rasa syukur yang otentik dan meriah, di mana semua orang berpesta bersama.
           </p>
         </div>
@@ -179,7 +179,7 @@ const LampungBarat = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Bukit Bawang Bakung
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Bagi para pemburu matahari terbit dan pecinta pemandangan, bukit-bukit di sekitar Liwa adalah surga tersembunyi. Lokasi seperti Bukit Barang Bareng atau Geredai menjadi titik berkemah favorit untuk menyaksikan secara langsung fenomena "Negeri di Atas Awan". Dari puncak-puncak ini, terhampar pemandangan 360 derajat Kota Liwa, lembah yang hijau, dan lautan kabut yang perlahan tersibak oleh mentari pagi.
           </p>
         </div>
@@ -193,6 +193,7 @@ const LampungBarat = () => {
           fontStyle: "italic",
           textAlign: "center",
           marginBottom: 24,
+          fontFamily: "'Poppins', sans-serif"
         }}
       >
         Lampung Barat, tanah 'Sekala Behak', sejuknya alam, dan luhurnya adat.

@@ -157,7 +157,7 @@ const AboutGallery = () => {
 
 
       {/* Konten About */}
-      <article className="max-w-3xl mx-auto text-justify text-gray-800 leading-relaxed prose prose-lg mb-16">
+      <article className="max-w-3xl mx-auto text-justify text-gray-800 leading-relaxed prose prose-lg mb-16" style={{fontFamily: 'Poppins, sans-serif'}}>
         <p>
           Budaya adalah cara kita hidup, berinteraksi, dan menghargai satu sama lain. Melalui budaya, kita mengenal jati diri serta memahami akar dari mana kita berasal. Website ini hadir untuk mengajak semua orang lebih dekat dengan budaya Lampung—warisan yang kaya akan nilai, simbol, dan filosofi kehidupan.
         </p>

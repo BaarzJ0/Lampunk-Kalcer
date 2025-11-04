@@ -8,7 +8,7 @@ const navLinks = [
   { to: '/languages', label: 'Languanges & Food' },
   { to: '/dresses', label: 'Dresses' },
   { to: '/video', label: 'Discover Video' },
-   { to: '/berita', label: 'Berita' },
+  { to: '/berita', label: 'Berita' },
 ];
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white border-b border-gray-300 shadow-sm">
+    <nav className="w-full bg-[#D8D188] border-b border-gray-300 shadow-sm">
       {/* Atas: Judul & Search */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 pt-10 pb-6">
         {/* Judul */}
@@ -62,7 +62,7 @@ const Navbar = () => {
       {/* Garis */}
       <div className="border-t border-gray-400" />
       {/* Menu */}
-      <div className="flex justify-center items-center py-2 bg-white">
+      <div className="flex justify-center items-center py-2 bg-[#D8D188]">
         <ul className="flex flex-row w-full max-w-5xl mx-auto justify-between">
           {navLinks.map((link) => (
             <li key={link.to}>

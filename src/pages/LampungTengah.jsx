@@ -74,7 +74,7 @@ const LampungTengah = () => {
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18 }}>
+      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
         Lampung Tengah merupakan salah satu kabupaten terluas dan menjadi 'jantung' Provinsi Lampung, berfungsi sebagai kabupaten induk yang melahirkan beberapa daerah otonomi baru. Wilayah ini dikenal sebagai salah satu lumbung pangan utama dan pusat agrikultur di Lampung
       </p>
 
@@ -117,7 +117,7 @@ const LampungTengah = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Javanese Culture
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Sebagai salah satu kantong komunitas transmigran terbesar, budaya Jawa tumbuh subur dan menyatu dengan kehidupan sehari-hari di Lampung Tengah. Kesenian klasik seperti pertunjukan wayang kulit, alunan merdu gamelan, hingga semaraknya tarian kuda lumping (kuda kepang) masih sering ditampilkan dalam berbagai perayaan.
           </p>
         </div>
@@ -137,7 +137,7 @@ const LampungTengah = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Adat Pepadun
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Adat Pepadun adalah identitas asli dan warisan luhur masyarakat Lampung yang mendiami wilayah Lampung Tengah. Budaya ini dikenal melalui upacara adat yang megah, terutama Begawi Cakak Pepadun, sebuah prosesi agung untuk pemberian gelar adat dan penaikan status sosial
           </p>
         </div>
@@ -179,7 +179,7 @@ const LampungTengah = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Balinese Culture
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Lampung Tengah juga merupakan rumah bagi komunitas Bali yang kuat. Mereka membawa serta warisan budaya dan agama Hindu yang kental, yang terlihat jelas di "kampung-kampung Bali" dengan arsitektur pura yang khas. Kehidupan beragama yang rukun ini terlihat dari berbagai upacara adat, seperti prosesi Melasti menjelang Hari Raya Nyepi.
           </p>
         </div>
@@ -193,6 +193,7 @@ const LampungTengah = () => {
           fontStyle: "italic",
           textAlign: "center",
           marginBottom: 24,
+          fontFamily: "'Poppins', sans-serif",
         }}
       >
         Lampung Tengah, jantung Lampung, harmoni dalam keberagaman dan semangat 'Beguwai Jejamo Wawai'.

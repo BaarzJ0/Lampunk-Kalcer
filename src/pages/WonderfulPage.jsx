@@ -9,14 +9,21 @@ import menaraSiger from "../assets/menara_siger.png";
 const WonderfulLampung = () => {
   return (
     <div
+      className="
+        min-h-screen text-neutral-200 font-sans relative
+        // Gradient Utama (gelap-terang-gelap)
+        bg-[linear-gradient(to_bottom,theme(colors.neutral.100)_13%,theme(colors.neutral.800)_20%,theme(colors.neutral.300)_40%,theme(colors.neutral.900)_100%)]
+        // Strip Emas di Tengah (linear-gradient kedua)
+        before:content-[''] before:absolute before:top-[45%] before:left-0 before:right-0 before:h-20 before:bg-[linear-gradient(to_right,transparent_0%,theme(colors.custom-light-gold)_20%,theme(colors.custom-gold)_50%,theme(colors.custom-light-gold)_80%,transparent_100%)]
+        before:opacity-30 // Sesuaikan transparansi strip emas jika terlalu mencolok
+      "
       style={{
-        maxWidth: 900,
-        margin: "40px auto",
+        
+        margin: "0px auto",
         fontFamily: "'Georgia', serif",
         color: "#2e2e2e",
         backgroundColor: "#ffffff",
         padding: "40px 30px",
-        boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
         borderRadius: 8,
       }}
     >
@@ -34,15 +41,15 @@ const WonderfulLampung = () => {
       </h1>
 
       {/* Paragraf pembuka */}
-      <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 24 }}>
+      <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 24, fontFamily: 'Poppins, sans-serif' }}>
         "Wonderful Lampung" adalah sebuah mosaik keindahan yang autentik. Dari puncak gunung berapi legendaris hingga ke dalam teluk yang magis, dari tenunan benang emas yang rumit hingga aksara kuno yang unik. Di sinilah petualangan bertemu tradisi. Di sinilah kemegahan alam berpadu dengan kearifan lokal. Temukan keajaiban Anda di Tanah Lampung.
       </p>
-      <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 32 }}>
+      <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontFamily: 'Poppins, sans-serif'}}>
         Lampung tidak hanya kaya akan budaya, tetapi juga dianugerahi keindahan alam yang spektakuler. Dari puncak gunung berapi legendaris hingga kawanan lumba-lumba di teluk tersembunyi, "Sai Bumi Rwa Jurai" menawarkan pengalaman tak terlupakan.
       </p>
 
       {/* Gambar utama */}
-      <div style={{ textAlign: "center", marginBottom: 40 }}>
+      <div style={{ textAlign: "center", marginBottom: 40 }} className ="py-20 px-5 md:px-55">
         <img
           src={gajah}
           alt="Gajah"
@@ -55,19 +62,19 @@ const WonderfulLampung = () => {
       </div>
 
       {/* Taman Nasional Way Kambas */}
-      <section style={{ marginBottom: 40 }}>
+      <section style={{ marginBottom: 40}} className="text-center">
         <h2
           style={{
             fontWeight: "bold",
             fontSize: 20,
             fontFamily: "'Cinzel', serif",
-            color: "#810d11",
+            color: "#ffffff",
             marginBottom: 12,
           }}
         >
           Taman Nasional Way Kambas (TNWK)
         </h2>
-        <p style={{ lineHeight: 1.6 }}>
+        <p style={{ lineHeight: 1.6, color: "#ffffff", fontFamily: 'Poppins, sans-serif'}}>
           Taman Nasional Way Kambas adalah salah satu taman nasional tertua di Indonesia dan rumah bagi satwa-satwa langka yang terancam punah. Tempat ini menjadi pusat konservasi utama untuk Gajah Sumatera. Selain gajah, TNWK juga menjadi habitat bagi Badak Sumatera, Harimau Sumatera, dan berbagai jenis satwa liar lainnya. Ini adalah destinasi wajib bagi pecinta alam dan mereka yang ingin melihat upaya pelestarian satwa ikonik Indonesia.
         </p>
       </section>
@@ -88,16 +95,16 @@ const WonderfulLampung = () => {
               fontWeight: "bold",
               fontSize: 18,
               fontFamily: "'Cinzel', serif",
-              color: "#810d11",
+              color: "#ffffff",
               marginBottom: 12,
             }}
           >
             Teluk Kiluan
           </h3>
-          <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
+          <p style={{ lineHeight: 1.6, marginBottom: 12, fontFamily: 'Poppins, sans-serif'}}>
             Terletak di Kabupaten Tanggamus, Teluk Kiluan adalah sebuah teluk mempesona yang menghadap langsung ke Samudera Hindia. Tempat ini terkenal sebagai spot terbaik untuk melihat lumba-lumba liar di habitat aslinya.
           </p>
-          <p style={{ lineHeight: 1.6 }}>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif' }} >
             Pengalaman magis berburu fajar dengan perahu Jukung (perahu tradisional) untuk menyaksikan ratusan lumba-lumba hitam hidung botol dan lumba-lumba paruh panjang melompat bebas di lautan lepas. Laguna Geyu (Laguna Tersembunyi) menawarkan tempat berenang pribadi dengan pemandangan laut lepas.
           </p>
         </div>
@@ -131,16 +138,16 @@ const WonderfulLampung = () => {
               fontWeight: "bold",
               fontSize: 18,
               fontFamily: "'Cinzel', serif",
-              color: "#810d11",
+              color: "#272323",
               marginBottom: 12,
             }}
           >
             Pulau Pahawang
           </h3>
-          <p style={{ lineHeight: 1.6, marginBottom: 12 }}>
+          <p style={{ lineHeight: 1.6, marginBottom: 12, fontFamily: 'Poppins, sans-serif'}}>
             Bagi pecinta pantai dan snorkeling, Pulau Pahawang di Kabupaten Pesawaran adalah surga utama. Destinasi island-hopping paling populer di Lampung ini dikelilingi oleh perairan biru toska yang jernih dan terumbu karang yang indah.
           </p>
-          <p style={{ lineHeight: 1.6 }}>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif'}}>
             Menjelajahi berbagai spot foto bawah laut, termasuk gugusan dan candi buatan yang kini menjadi rumah bagi ikan-ikan hias.
           </p>
         </div>
@@ -184,13 +191,13 @@ const WonderfulLampung = () => {
               fontWeight: "bold",
               fontSize: 18,
               fontFamily: "'Cinzel', serif",
-              color: "#810d11",
+              color: "#272323",
               marginBottom: 12,
             }}
           >
             Gunung Anak Krakatau
           </h3>
-          <p style={{ lineHeight: 1.6 }}>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif' }}>
             Nama "Anak Krakatau" berarti "anak gunung Krakatau" yang muncul dari letusan dahsyat Gunung Krakatau pada tahun 1883. Gunung ini terus tumbuh dan menjadi simbol kekuatan alam yang luar biasa di Selat Sunda.
           </p>
         </div>
@@ -224,13 +231,13 @@ const WonderfulLampung = () => {
               fontWeight: "bold",
               fontSize: 18,
               fontFamily: "'Cinzel', serif",
-              color: "#810d11",
+              color: "#ffffff",
               marginBottom: 12,
             }}
           >
             Pantai Tanjung Setia, Krui
           </h3>
-          <p style={{ lineHeight: 1.6 }}>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif'}}>
             Terletak di Kabupaten Pesisir Barat, Pantai Tanjung Setia dikenal sebagai surga bagi peselancar dengan ombak besar dan pemandangan alam yang menakjubkan. Pantai ini juga menjadi tempat konservasi penyu yang penting.
           </p>
         </div>
@@ -238,7 +245,7 @@ const WonderfulLampung = () => {
 
       {/* Menara Siger */}
       <section style={{ marginBottom: 0 }}>
-        <h3
+        {/* <h3
           style={{
             fontWeight: "bold",
             fontSize: 18,
@@ -248,18 +255,19 @@ const WonderfulLampung = () => {
           }}
         >
           Menara Siger
-        </h3>
+        </h3> */}
         <img
           src={menaraSiger}
           alt="Menara Siger"
           style={{
-            width: "100%",
+            width: "70%",
             borderRadius: 8,
             boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
             marginBottom: 16,
+            marginLeft: 250,
           }}
         />
-        <p style={{ lineHeight: 1.6 }}>
+        <p style={{ lineHeight: 1.6, color: "#ffffff", fontFamily: 'Poppins, sans-serif' }}>
           Menara Siger adalah landmark ikonik di Lampung yang melambangkan budaya dan sejarah daerah ini. Dengan arsitektur khas dan warna kuning cerah, menara ini menjadi simbol kebanggaan masyarakat Lampung.
         </p>
       </section>
