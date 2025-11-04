@@ -13,14 +13,14 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#e7df9e] to-[#a89e5f] text-black py-8 px-6 border-t border-gray-400">
+    <footer className="w-full bg-gradient-to-b from-[#E3DC8F] to-[#7D794F] text-black py-8 px-6 border-t border-gray-400">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Kiri: Logo dan menu */}
         <div className="flex-1 flex flex-col md:items-start">
           <div className="text-3xl font-normal mb-2" style={{ fontFamily: 'Cinzel, serif' }}>
             LAMPUNK KALCER
           </div>
-          <div className="text-2xl tracking-widest mb-4" style={{ fontFamily: 'Cinzel, serif', letterSpacing: '0.2em' }}>
+          <div className="text-2xl tracking-widest mb-4" style={{ fontFamily: 'Cinzel, serif', letterSpacing: '0.2em', color: '#ffffff' }}>
             OFFICIAL SITE
           </div>
           {/* Menu */}
@@ -30,7 +30,7 @@ const Footer = () => {
                 key={link.to}
                 to={link.to}
                 className="text-base hover:underline"
-                style={{ fontFamily: 'Cinzel, serif' }}
+                style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}
               >
                 {link.label}
               </Link>

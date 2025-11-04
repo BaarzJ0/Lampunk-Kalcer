@@ -74,7 +74,7 @@ const LampungSelatan = () => {
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18, }}>
+      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
         Lampung Selatan adalah kabupaten yang terletak di ujung selatan Provinsi Lampung dan dikenal sebagai "Gerbang Pulau Sumatera". Daerah ini memiliki peranan penting sebagai pintu masuk utama melalui Pelabuhan Bakauheni yang ikonik. Selain kekayaan sejarah dan peran strategisnya, Lampung Selatan juga terkenal akan keindahan alamnya, warisan budaya, dan kearifan lokal masyarakat pesisir. Dari ikon legendaris seperti Menara Siger hingga tradisi adat yang masih lestari, Lampung Selatan memancarkan semangat keterbukaan, keberagaman, dan kemajuan masyarakat Lampung selatan masa kini.
       </p>
 
@@ -117,7 +117,7 @@ const LampungSelatan = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tarian Sigeh
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Tari Sigeh adalah tarian tradisional khas Lampung yang dipentaskan untuk menyambut tamu kehormatan dan dalam upacara adat. Gerakannya yang anggun dan lembut melambangkan penghormatan, keramahan, dan kegembiraan masyarakat Lampung dalam menerima tamu.
           </p>
         </div>
@@ -137,7 +137,7 @@ const LampungSelatan = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tari Halibambang
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0",}}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif"}}>
           Tari Halibambang adalah tarian tradisional Lampung, khususnya dari masyarakat adat Saibatin (Sekala Brak). Nama "Halibambang" berarti "kupu-kupu", dan tarian ini menggambarkan gerakan anggun kupu-kupu yang terbang. Tarian ini melambangkan kesopanan, keindahan, dan keagungan gadis Lampung, yang awalnya dipentaskan dalam pesta adat dan pernikahan.
           </p>
         </div>
@@ -179,7 +179,7 @@ const LampungSelatan = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tuping
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Tari Tuping adalah drama tari tradisional dari Lampung Selatan yang menggunakan topeng (disebut tupping). Tarian ini awalnya menggambarkan 12 pasukan gerilya Pahlawan Radin Intan II yang menyamar untuk melawan penjajah. Gerakannya teatrikal dan gagah, melambangkan semangat patriotisme dan kepahlawanan.
 
           </p>
@@ -194,6 +194,7 @@ const LampungSelatan = () => {
           fontStyle: "italic",
           textAlign: "center",
           marginBottom: 24,
+          fontFamily: "'Poppins', sans-serif"
         }}
       >
         

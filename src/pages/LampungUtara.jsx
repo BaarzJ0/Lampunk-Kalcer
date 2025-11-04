@@ -74,7 +74,7 @@ const LampungUtara = () => {
       </p>
 
       {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18 }}>
+      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif"}}>
         Lampung Utara adalah salah satu kabupaten tertua di Provinsi Lampung, dikenal sebagai "Gerbang Sumatera Selatan". Wilayah ini kaya akan sejarah, budaya, dan keindahan alam. Tugu Lamut sebagai ikon kota menggambarkan semangat dan kejayaan masyarakat Lampung Utara.
       </p>
 
@@ -117,7 +117,7 @@ const LampungUtara = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Tarian Raja
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Tarian Raja adalah tarian tradisional yang biasanya dipentaskan dalam upacara adat dan penyambutan tamu kehormatan. Gerakannya anggun dan penuh makna, melambangkan kebesaran dan keagungan budaya Lampung Utara.
           </p>
         </div>
@@ -133,11 +133,11 @@ const LampungUtara = () => {
           justifyContent: "flex-end",
         }}
       >
-        <div style={{ textAlign: "right", maxWidth: 260 }}>
+        <div style={{ textAlign: "right", maxWidth: 260,  }}>
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Upacara Pepadun
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Upacara Pepadun adalah prosesi adat untuk mengangkat seseorang menjadi pemimpin adat (penyimbang). Upacara ini sarat dengan nilai-nilai demokrasi, musyawarah, dan gotong royong.
           </p>
         </div>
@@ -179,7 +179,7 @@ const LampungUtara = () => {
           <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
             Terapang
           </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0" }}>
+          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
             Terapang adalah keris khas Lampung Utara yang menjadi simbol keberanian dan kehormatan. Senjata tradisional ini sering digunakan dalam upacara adat dan diwariskan secara turun-temurun.
           </p>
         </div>
@@ -193,6 +193,7 @@ const LampungUtara = () => {
           fontStyle: "italic",
           textAlign: "center",
           marginBottom: 24,
+          fontFamily: "'Poppins', sans-serif",
         }}
       >
         Lampung Utara, tanah penuh sejarah, budaya, dan harmoni.

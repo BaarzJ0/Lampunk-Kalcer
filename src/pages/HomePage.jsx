@@ -108,7 +108,7 @@ const HomePage = () => {
 
       {/* About Section */}
       <section ref={aboutRef} className="py-20 px-5 md:px-10 max-w-6xl mx-auto">
-        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
+        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center" style={{fontFamily: 'Poppins, sans-serif'}}>
           Lampoenk Kalcer, yang diinisiasi oleh Kelompok 3in LKMO, mengorganisasi kekayaan aset budaya Lampung yang beragam ke dalam tema-tema yang kuat. Tujuannya adalah untuk menyampaikan konteks historis, nilai-nilai, serta signifikansi mendalam dari warisan budaya daerah ini.
         </p>
       </section>
@@ -121,7 +121,7 @@ const HomePage = () => {
             Peta Interaktif Provinsi Lampung
             <span className="absolute bottom-[-10px] left-0 w-16 h-1 bg-gold"></span>
           </h2>
-          <p className="text-gray-700 mb-8 font-normal">
+          <p className="text-gray-700 mb-8 font-normal" style={{fontFamily: 'Poppins, sans-serif'}}>
             KLIK PADA TOMBOL MERAH DI PETA INTERAKTIF UNTUK MENJELAJAHI KEINDAHAN DAN KEKAYAAN BUDAYA SETIAP DAERAH DI PROVINSI LAMPUNG!
           </p>
           <SimpleInteractiveMap />
