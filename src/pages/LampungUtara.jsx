@@ -27,10 +27,10 @@ const LampungUtara = () => {
 
         {/* Deskripsi List - Responsive */}
         <div>
-  <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 12,}}>
+  <h2 style={{ fontSize: 40, textAlign: "center", marginBottom: 12,}}>
     The Gold Spear Monument
   </h2>
-  <p style={{ fontSize: 14, textAlign: "center", maxWidth: 400, margin: "0 auto" }}>
+  <p style={{ fontSize: 20, textAlign: "center", maxWidth: 1000, margin: "0 auto" }}>
     Lampung Utara dikenal memiliki masyarakat yang terbuka (sakay-sambayan) dan menerima keberagaman suku pendatang (Jawa, Sunda, dll.) yang berbaur dengan suku asli Lampung Abung.
   </p>
 </div>
