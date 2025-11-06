@@ -199,7 +199,7 @@ const LanguageAndFoodLampung = () => {
               p
             />
           </div>
-           <p
+          <p
             style={{
               textAlign: "center",
               color: "#fff",

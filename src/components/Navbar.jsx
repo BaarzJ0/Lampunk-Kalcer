@@ -65,16 +65,24 @@ const Navbar = () => {
       <div className="flex justify-center items-center py-2 bg-[#D8D188]">
         <ul className="flex flex-row w-full max-w-5xl mx-auto justify-between">
           {navLinks.map((link) => (
-            <li key={link.to}>
-              <Link
-                to={link.to}
-                className={`px-2 text-[1rem] font-normal transition-colors ${isActive(link.to) ? 'text-black' : 'text-gray-800 hover:text-black'}`}
-                style={{ fontFamily: 'Cinzel, serif' }}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+  <li key={link.to}>
+    <Link
+      to={link.to}
+      className={`
+        relative block px-4 py-2 rounded-lg text-[1rem] font-normal 
+        transition-all duration-300 ease-in-out
+        ${isActive(link.to) 
+          ? 'text-black font-semibold bg-white shadow-md scale-105' 
+          : 'text-gray-800 hover:text-black hover:bg-white/60 hover:shadow-sm'
+        }
+        active:scale-95
+      `}
+      style={{ fontFamily: 'Cinzel, serif' }}
+    >
+      {link.label}
+    </Link>
+  </li>
+))}
         </ul>
       </div>
     </nav>

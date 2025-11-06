@@ -66,99 +66,144 @@ const SimpleInteractiveMap = () => {
 
   return (
     <>
-      <div className="relative w-full max-w-6xl mx-auto">
-        <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-gold">
-          <h3 className="text-2xl font-playfair font-bold text-dark-red mb-8 text-center">
+      <div className="relative w-full max-w-6xl mx-auto p-4">
+        <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-yellow-400">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center" style={{ fontFamily: 'Cinzel, serif' }}>
             🗺️ Peta Interaktif Provinsi Lampung
           </h3>
 
-          {/* Simple Map Layout */}
-          <div className="relative bg-linear-to-br from-green-100 to-blue-100 rounded-lg p-8 min-h-[500px] border-2 border-gold overflow-hidden shadow-inner">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-full h-full"
-                   style={{
-                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-                   }}>
-              </div>
-            </div>
+          {/* SVG Map Container */}
+          <div className="relative rounded-lg border-2 border-yellow-400 overflow-hidden shadow-inner bg-gradient-to-br from-green-50 to-blue-50">
+            
+            {/* SVG Interactive Map */}
+            <svg viewBox="0 0 800 600" className="w-full h-auto" style={{ display: 'block' }}>
+              <defs>
+                <filter id="shadow">
+                  <feDropShadow dx="2" dy="4" stdDeviation="4" floodOpacity="0.3"/>
+                </filter>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{stopColor: '#D1FAE5', stopOpacity: 1}} />
+                  <stop offset="100%" style={{stopColor: '#DBEAFE', stopOpacity: 1}} />
+                </linearGradient>
+              </defs>
 
-            {/* Lampung Map Shape (Simplified) */}
-            <div className="absolute inset-4 bg-linear-to-br from-green-200 to-green-300 rounded-lg border-2 border-green-400 opacity-80">
-              {/* Region Buttons */}
-              <button
+              {/* Base Map Background */}
+              <rect width="800" height="600" fill="url(#gradient1)"/>
+
+              {/* Lampung Utara - Top Center */}
+              <path
+                d="M 300 50 L 500 50 L 520 120 L 500 180 L 300 180 L 280 120 Z"
+                fill="#3B82F6"
+                stroke="#fff"
+                strokeWidth="3"
+                filter="url(#shadow)"
+                className="cursor-pointer transition-all duration-300 hover:opacity-80"
                 onClick={() => handleRegionClick('Lampung Utara')}
-                className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red hover:scale-105 transition-all shadow-lg border-2 border-white animate-pulse"
-              >
-                🏔️ Lampung Utara
-              </button>
+              />
+              <text x="400" y="120" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" className="pointer-events-none select-none">
+                LAMPUNG UTARA
+              </text>
 
-              <button
-                onClick={() => handleRegionClick('Lampung Timur')}
-                className="absolute top-1/2 right-8 transform -translate-y-1/2 bg-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red hover:scale-105 transition-all shadow-lg border-2 border-white animate-bounce"
-              >
-                🌊 Lampung Timur
-              </button>
-
-              <button
-                onClick={() => handleRegionClick('Lampung Selatan')}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red hover:scale-105 transition-all shadow-lg border-2 border-white animate-pulse"
-              >
-                🏖️ Lampung Selatan
-              </button>
-
-              <button
+              {/* Lampung Barat - Left Side */}
+              <path
+                d="M 80 200 L 250 200 L 270 320 L 250 440 L 80 440 L 50 320 Z"
+                fill="#8B5CF6"
+                stroke="#fff"
+                strokeWidth="3"
+                filter="url(#shadow)"
+                className="cursor-pointer transition-all duration-300 hover:opacity-80"
                 onClick={() => handleRegionClick('Lampung Barat')}
-                className="absolute top-1/2 left-8 transform -translate-y-1/2 bg-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red hover:scale-105 transition-all shadow-lg border-2 border-white animate-bounce"
-              >
-                🌲 Lampung Barat
-              </button>
+              />
+              <text x="165" y="315" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" className="pointer-events-none select-none">
+                LAMPUNG
+              </text>
+              <text x="165" y="340" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" className="pointer-events-none select-none">
+                BARAT
+              </text>
 
-              <button
+              {/* Lampung Tengah - Center */}
+              <path
+                d="M 290 210 L 510 210 L 530 320 L 510 430 L 290 430 L 270 320 Z"
+                fill="#EF4444"
+                stroke="#fff"
+                strokeWidth="3"
+                filter="url(#shadow)"
+                className="cursor-pointer transition-all duration-300 hover:opacity-80"
                 onClick={() => handleRegionClick('Lampung Tengah')}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red hover:scale-105 transition-all shadow-lg border-2 border-white animate-pulse"
-              >
-                🏛️ Lampung Tengah
-              </button>
+              />
+              <text x="400" y="315" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" className="pointer-events-none select-none">
+                LAMPUNG TENGAH
+              </text>
 
-              {/* Decorative Elements */}
-              <div className="absolute top-4 left-4 w-8 h-8 bg-gold rounded-full animate-pulse"></div>
-              <div className="absolute top-4 right-4 w-8 h-8 bg-gold rounded-full animate-pulse"></div>
-              <div className="absolute bottom-4 left-4 w-8 h-8 bg-gold rounded-full animate-pulse"></div>
-              <div className="absolute bottom-4 right-4 w-8 h-8 bg-gold rounded-full animate-pulse"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gold rounded-full animate-pulse opacity-50"></div>
-            </div>
+              {/* Lampung Timur - Right Side */}
+              <path
+                d="M 540 200 L 720 200 L 750 320 L 720 440 L 540 440 L 520 320 Z"
+                fill="#10B981"
+                stroke="#fff"
+                strokeWidth="3"
+                filter="url(#shadow)"
+                className="cursor-pointer transition-all duration-300 hover:opacity-80"
+                onClick={() => handleRegionClick('Lampung Timur')}
+              />
+              <text x="630" y="315" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" className="pointer-events-none select-none">
+                LAMPUNG
+              </text>
+              <text x="630" y="340" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" className="pointer-events-none select-none">
+                TIMUR
+              </text>
 
-            {/* Compass */}
-            <div className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg">
-              <div className="text-xs text-gray-600 font-bold">N</div>
-            </div>
+              {/* Lampung Selatan - Bottom */}
+              <path
+                d="M 350 460 L 600 460 L 620 520 L 600 560 L 350 560 L 330 520 Z"
+                fill="#F59E0B"
+                stroke="#fff"
+                strokeWidth="3"
+                filter="url(#shadow)"
+                className="cursor-pointer transition-all duration-300 hover:opacity-80"
+                onClick={() => handleRegionClick('Lampung Selatan')}
+              />
+              <text x="475" y="515" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" className="pointer-events-none select-none">
+                LAMPUNG SELATAN
+              </text>
+            </svg>
+
           </div>
 
+          {/* Info & Legend */}
           <div className="mt-6 text-center">
-            <p className="text-text-light text-sm mb-4">
-              <i className="fas fa-hand-pointer mr-2 text-red"></i>
-              Klik pada nama daerah berwarna merah untuk melihat informasi detail
+            <p className="text-gray-600 text-sm mb-4">
+              <i className="fas fa-hand-pointer mr-2 text-blue-500"></i>
+              Klik pada area daerah untuk melihat informasi detail
             </p>
-            <div className="flex justify-center space-x-4 text-xs">
+
+            <div className="flex flex-wrap justify-center gap-4 text-xs">
               <span className="flex items-center">
-                <div className="w-3 h-3 bg-red rounded-full mr-1"></div>
-                Daerah Interaktif
+                <div className="w-3 h-3 bg-blue-500 rounded-full mr-1.5"></div>
+                <span className="text-gray-700">Lampung Utara</span>
               </span>
               <span className="flex items-center">
-                <div className="w-3 h-3 bg-gold rounded-full mr-1"></div>
-                Titik Navigasi
+                <div className="w-3 h-3 bg-red-500 rounded-full mr-1.5"></div>
+                <span className="text-gray-700">Lampung Tengah</span>
               </span>
               <span className="flex items-center">
-                <div className="w-3 h-3 bg-green-400 rounded-full mr-1"></div>
-                Area Lampung
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-1.5"></div>
+                <span className="text-gray-700">Lampung Timur</span>
+              </span>
+              <span className="flex items-center">
+                <div className="w-3 h-3 bg-purple-500 rounded-full mr-1.5"></div>
+                <span className="text-gray-700">Lampung Barat</span>
+              </span>
+              <span className="flex items-center">
+                <div className="w-3 h-3 bg-yellow-500 rounded-full mr-1.5"></div>
+                <span className="text-gray-700">Lampung Selatan</span>
               </span>
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal - Same as before */}
       {showModal && selectedRegion && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -170,31 +215,31 @@ const SimpleInteractiveMap = () => {
               />
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 bg-white/80 hover:bg-white text-dark-red rounded-full w-8 h-8 flex items-center justify-center transition-all"
+                className="absolute top-4 right-4 bg-white/80 hover:bg-white text-gray-800 rounded-full w-8 h-8 flex items-center justify-center transition-all"
               >
-                <i className="fas fa-times"></i>
+                ✕
               </button>
             </div>
 
             <div className="p-6">
-              <h2 className="text-2xl font-playfair font-bold text-dark-red mb-4">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Cinzel, serif' }}>
                 {selectedRegion.title}
               </h2>
 
-              <p className="text-text-light leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6">
                 {selectedRegion.description}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-dark-red mb-3 flex items-center">
-                    <i className="fas fa-mountain mr-2 text-gold"></i>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                    <span className="mr-2">🏔️</span>
                     Tempat Wisata
                   </h3>
                   <ul className="space-y-2">
                     {selectedRegion.attractions.map((attraction, index) => (
-                      <li key={index} className="flex items-center text-text-light">
-                        <i className="fas fa-map-marker-alt mr-2 text-red text-sm"></i>
+                      <li key={index} className="flex items-center text-gray-600">
+                        <span className="mr-2 text-blue-500">📍</span>
                         {attraction}
                       </li>
                     ))}
@@ -202,22 +247,22 @@ const SimpleInteractiveMap = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-dark-red mb-3 flex items-center">
-                    <i className="fas fa-utensils mr-2 text-gold"></i>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                    <span className="mr-2">🍽️</span>
                     Kuliner Khas
                   </h3>
-                  <p className="text-text-light leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {selectedRegion.food}
                   </p>
                 </div>
               </div>
 
               <div className="mt-6">
-                <h3 className="text-lg font-semibold text-dark-red mb-3 flex items-center">
-                  <i className="fas fa-theater-masks mr-2 text-gold"></i>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                  <span className="mr-2">🎭</span>
                   Budaya & Tradisi
                 </h3>
-                <p className="text-text-light leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {selectedRegion.culture}
                 </p>
               </div>
@@ -225,9 +270,8 @@ const SimpleInteractiveMap = () => {
               <div className="mt-6 flex justify-end">
                 <button
                   onClick={closeModal}
-                  className="btn btn-primary"
+                  className="px-6 py-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition-all"
                 >
-                  <i className="fas fa-times mr-2"></i>
                   Tutup
                 </button>
               </div>
