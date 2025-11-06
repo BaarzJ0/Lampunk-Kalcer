@@ -196,8 +196,28 @@ const LanguageAndFoodLampung = () => {
                 width: "100%",
               }}
               allowFullScreen
+              p
             />
           </div>
+           <p
+            style={{
+              textAlign: "center",
+              color: "#fff",
+              marginTop: 12,
+              fontSize: 14,
+              fontStyle: "italic",
+            }}
+          >
+            Sumber aplikasi:{" "}
+            <a
+              href="https://github.com/meizano/ketikAksaraLampung"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#fff", textDecoration: "underline" }}
+            >
+              meizano/ketikAksaraLampung
+            </a>
+          </p>
           
         </section>
 

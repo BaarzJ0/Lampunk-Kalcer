@@ -16,7 +16,7 @@ import Berita from './pages/Berita';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import DashboardNews from './pages/DashboardNews';
-import DashboardGallery from './pages/DashboardGallery'; // Pastikan file ini ada
+import DashboardGallery from './pages/DashboardGallery';
 import PrivateRoute from './components/PrivateRoute';
 
 import LampungUtara from './pages/LampungUtara';
@@ -24,12 +24,14 @@ import LampungUtara from './pages/LampungUtara';
 function AppContent() {
   const location = useLocation();
 
+  // Daftar path yang tidak ingin menampilkan Navbar
   const hideNavbarPaths = [
     '/dashboard',
     '/dashboard/news',
     '/dashboard/gallery',
   ];
 
+  // Cek apakah path saat ini termasuk yang harus sembunyikan Navbar
   const hideNavbar = hideNavbarPaths.some(path => location.pathname.startsWith(path));
 
   return (
@@ -48,6 +50,7 @@ function AppContent() {
 
         <Route path="/login" element={<Login />} />
 
+        {/* Private Routes untuk dashboard */}
         <Route
           path="/dashboard"
           element={
