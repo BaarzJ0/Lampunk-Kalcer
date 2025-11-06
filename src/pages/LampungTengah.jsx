@@ -2,202 +2,191 @@ import React from "react";
 
 const LampungTengah = () => {
   return (
-    <div
-      style={{
-        maxWidth: 700,
-        margin: "40px auto",
-        fontFamily: "'Marcellus', serif",
-        color: "#222",
-        lineHeight: 1.7,
-        padding: "0 16px",
-        background: "#fff",
-        borderRadius: 12,
-        boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
-      }}
-    >
-      {/* Judul kecil di atas */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 13,
-          letterSpacing: "0.15em",
-          marginBottom: 8,
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontWeight: 600,
-        }}
-      >
-        Lampung Tengah
-      </p>
+    <div className="min-h-screen bg-white">
+      
+      {/* Container dengan padding responsive */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        
+        {/* Judul utama */}
+        <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-8 tracking-wider uppercase text-[#b31217]"
+            style={{ fontFamily: "'Cinzel', serif" }}>
+          Lampung Tengah
+        </h1>
 
-      {/* Judul utama */}
-      <h1
-        style={{
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 26,
-          marginBottom: 24,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        Welcome to Lampung Tengah
-      </h1>
+        {/* Grid 2x2 Images - Responsive */}
+        <div className="w-full mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+            
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img 
+                src="/tugu-canang.png" 
+                alt="Tugu Canang"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-      {/* Gambar utama */}
-      <div style={{ textAlign: "center", marginBottom: 12 }}>
-        <img
-          src="/tugu-canang.png"
-          alt="Tugu Canang"
-          style={{
-            maxWidth: "100%",
-            height: "auto",
-            borderRadius: 8,
-            boxShadow: "0 2px 12px rgba(179,18,23,0.10)",
-          }}
-        />
-      </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img 
+                src="/Tugu_Lampung_Tengah 1.png" 
+                alt="Tugu Tangan"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-      {/* Caption gambar */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 16,
-          fontWeight: 500,
-          marginBottom: 32,
-          color: "#b31217",
-        }}
-      >
-        Tugu Canang
-      </p>
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img 
+                src="/gajah putih lampung tengah 1.png" 
+                alt="Tugu Gajah Putih"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-      {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
-        Lampung Tengah merupakan salah satu kabupaten terluas dan menjadi 'jantung' Provinsi Lampung, berfungsi sebagai kabupaten induk yang melahirkan beberapa daerah otonomi baru. Wilayah ini dikenal sebagai salah satu lumbung pangan utama dan pusat agrikultur di Lampung
-      </p>
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img 
+                src="/tugu-kopiah.png" 
+                alt="Tugu Kopiah Emas"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-      {/* The Culture */}
-      <h2
-        style={{
-          fontSize: 18,
-          fontWeight: 600,
-          color: "#b31217",
-          marginBottom: 16,
-          letterSpacing: "0.05em",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        The Culture
-      </h2>
-
-      {/* Baris 1: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-start",
-        }}
-      >
-        <img
-          src="/javanese.png"
-          alt="Javanese Culture"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Javanese Culture
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Sebagai salah satu kantong komunitas transmigran terbesar, budaya Jawa tumbuh subur dan menyatu dengan kehidupan sehari-hari di Lampung Tengah. Kesenian klasik seperti pertunjukan wayang kulit, alunan merdu gamelan, hingga semaraknya tarian kuda lumping (kuda kepang) masih sering ditampilkan dalam berbagai perayaan.
-          </p>
+          </div>
         </div>
-      </div>
 
-      {/* Baris 2: teks kiri, gambar kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-end",
-        }}
-      >
-        <div style={{ textAlign: "right", maxWidth: 260 }}>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Adat Pepadun
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Adat Pepadun adalah identitas asli dan warisan luhur masyarakat Lampung yang mendiami wilayah Lampung Tengah. Budaya ini dikenal melalui upacara adat yang megah, terutama Begawi Cakak Pepadun, sebuah prosesi agung untuk pemberian gelar adat dan penaikan status sosial
-          </p>
+        {/* Deskripsi List - Responsive */}
+        <div className="w-full mb-12 lg:mb-16">
+          <div className="space-y-4 sm:space-y-5 text-sm sm:text-base lg:text-lg leading-relaxed">
+            
+            <div className="flex gap-2 sm:gap-3">
+              <div className="flex-shrink-0 font-bold text-gray-900">1.</div>
+              <div className="flex-1 text-gray-800">
+                <span className="text-gray-900">Tugu Canang:</span> Melambangkan alat komunikasi tradisional atau penanda keramaian, tugu ini menjadi simbol gerakan perubahan dan RTH di Lapangan Merdeka Gunung Sugih.
+              </div>
+            </div>
+
+            <div className="flex gap-2 sm:gap-3">
+              <div className="flex-shrink-0 font-bold text-gray-900">2.</div>
+              <div className="flex-1 text-gray-800">
+                <span className="text-gray-900">Tugu Tangan (Tugu Pepadun):</span> Berbentuk dua tangan penari wanita menopang singgerang adat (Pepadun), tugu ini merupakan simbol penghormatan dan kebanggaan budaya Adat Pepadun Lampung Tengah.
+              </div>
+            </div>
+
+            <div className="flex gap-2 sm:gap-3">
+              <div className="flex-shrink-0 font-bold text-gray-900">3.</div>
+              <div className="flex-1 text-gray-800">
+                <span className="text-gray-900">Tugu Gajah Putih (Tugu Gajah Siwo Mergo):</span> Menampilkan sembilan patung gajah, tugu ini melambangkan Sembilan Marga (Siwo Mergo) yang menjadi tonggak sejarah dan identitas adat di Lampung Tengah.
+              </div>
+            </div>
+
+            <div className="flex gap-2 sm:gap-3">
+              <div className="flex-shrink-0 font-bold text-gray-900">4.</div>
+              <div className="flex-1 text-gray-800">
+                <span className="text-gray-900">Tugu Kopiah Emas:</span> Berbentuk replika tutup kepala adat pria Lampung, tugu ini menjadi landmark yang mencolok dan ikonik di Jalan Lintas Sumatera, Gunung Sugih.
+              </div>
+            </div>
+
+          </div>
         </div>
-        <img
-          src="/pepadun 1.png"
-          alt="Adat Pepadun"
-          style={{
-            width: 180,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
+
       </div>
 
-      {/* Baris 3: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          justifyContent: "flex-start",
-          marginBottom: 40,
-        }}
-      >
-        <img
-          src="/balinese.png"
-          alt="Balinese Culture"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Balinese Culture
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Lampung Tengah juga merupakan rumah bagi komunitas Bali yang kuat. Mereka membawa serta warisan budaya dan agama Hindu yang kental, yang terlihat jelas di "kampung-kampung Bali" dengan arsitektur pura yang khas. Kehidupan beragama yang rukun ini terlihat dari berbagai upacara adat, seperti prosesi Melasti menjelang Hari Raya Nyepi.
-          </p>
+      {/* The Culture Section - Full width dengan background */}
+      <div className="min-h-screen bg-[#DEDEDC]">
+        
+        {/* Header */}
+        <div className="py-8 sm:py-12 lg:py-16">
+          <div className="flex items-center justify-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-wide text-center">
+              THE CULTURE
+            </h1>
+          </div>
         </div>
+
+        {/* Section 1: Javanese Culture */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-right">
+                JAVANESE CULTURE
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-1 md:order-2">
+              <img 
+                src="/javanese.png" 
+                alt="Javanese Wayang Performance" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        {/* Section 2: Adat Pepadun */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-1">
+              <img 
+                src="/pepadun 1.png" 
+                alt="Adat Pepadun" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-left">
+                ADAT PEPADUN
+              </h2>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Section 3: Bali Culture */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-right">
+                BALI CULTURE
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-1 md:order-2">
+              <img 
+                src="/balinese.png" 
+                alt="Bali Culture" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        {/* Section 4: Nanas Kaleng */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-1">
+              <img 
+                src="/nanas kaleng lamteng 1.png" 
+                alt="Nanas Kaleng Khas Lampung Tengah" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-left">
+                Nanas Kaleng Khas Lampung Tengah
+              </h2>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      {/* Penutup */}
-      <p
-        style={{
-          fontSize: 15,
-          color: "#b31217",
-          fontStyle: "italic",
-          textAlign: "center",
-          marginBottom: 24,
-          fontFamily: "'Poppins', sans-serif",
-        }}
-      >
-        Lampung Tengah, jantung Lampung, harmoni dalam keberagaman dan semangat 'Beguwai Jejamo Wawai'.
-      </p>
     </div>
   );
 };
