@@ -23,7 +23,7 @@ const LanguageAndFoodLampung = () => {
       style={{
         minHeight: "100vh",
         background: "linear-gradient(180deg, #EB5A5A 0%, #3C0F0F 20%, #3C0F0F 100%)",
-        fontFamily: "'Poppins', sans-serif",
+        fontFamily: "'Playfair Display', serif",
         margin: 0,
         padding: 5,
         color: "#fff",
@@ -37,33 +37,27 @@ const LanguageAndFoodLampung = () => {
         }}
       >
         {/* Judul utama */}
-        <div style={{ 
-          textAlign: "center", 
-          marginBottom: 12,
-          display: "flex",
-          justifyContent: "center",
-          width: "100%"
-        }}>
-          <img 
-            src="/language_font.png"
-            alt="Languages"
-            style={{
-              maxWidth: "500px",
-              width: "100%",
-              height: "auto",
-              margin: "20px auto",
-            }}
-          />
-        </div>
+        <h1
+          style={{
+            fontSize: 48,
+            fontWeight: "bold",
+            color: "#fff",
+            marginBottom: 12,
+            letterSpacing: "1px",
+            textAlign: "center",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+          }}
+        >
+          Languanges
+        </h1>
         <p
           style={{
-            textAlign: "left",
+            textAlign: "center",
             color: "#fff",
-            fontSize: 24,
+            fontSize: 18,
             marginBottom: 32,
             lineHeight: 1.6,
-            fontFamily: "'Marcellus', serif",
-            paddingLeft: "20px",
+            textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
           }}
         >
           Apa Itu Bahasa Lampung?
@@ -72,11 +66,11 @@ const LanguageAndFoodLampung = () => {
         {/* Bahasa Lampung Content */}
         <section style={{ marginBottom: 48 }}>
           <p style={{ color: "#fff", marginBottom: 24, lineHeight: 1.8, textAlign: "justify", fontSize: "16px" }}>
-            Bahasa Lampung adalah sebuah bahasa Austronesia yang dituturkan oleh suku Lampung di Provinsi Lampung dan sekitarnya. 
-            Bahasa ini memiliki posisi unik dalam rumpun bahasa Melayu-Polinesia dan menjadi salah satu kekayaan linguistik yang 
-            penting di Indonesia. Sama seperti budaya masyarakatnya, bahasanya pun memiliki ciri khas yang membedakannya dari 
-            bahasa-bahasa lain di sekitarnya.
+            Bahasa Lampung adalah sebuah bahasa Austronesia yang digunakan oleh suku Lampung yang berdomisili di Provinsi Lampung. 
+            Bahasa ini merupakan salah satu kekayaan linguistik yang penting di Indonesia. Sama seperti bahasa melayu lainnya, 
+            Bahasa ini pun memiliki kode unik yang banyak digunakan dalam budaya dan adat Lampung yang menjadi "Aksara Lampung".
           </p>
+          
           <div
             style={{
               background: "rgba(255,255,255,0.1)",
@@ -99,7 +93,7 @@ const LanguageAndFoodLampung = () => {
                   <tr
                     key={idx}
                     style={{
-                      borderBottom: idx !== vocabLampung.length - 1 ? "1px solid rgba(255,255,255,0.2)" : "none",
+                      borderBottom: idx !== vocabLampung.length - 1 ? "1px solid #f0caca" : "none",
                       color: "#ffffff",
                     }}
                   >
@@ -110,50 +104,43 @@ const LanguageAndFoodLampung = () => {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: 13, color: "#fff", marginTop: 4, textAlign: "center" }}>
-            *Ayo belajar sapaan sederhana dalam bahasa Lampung!
-          </p>
         </section>
 
         {/* Aksara Lampung */}
-        <section
-          style={{
-            padding: 24,
-            marginBottom: 48,
-            fontSize: 16,
-            lineHeight: 1.6,
-            color: "#fff",
-          }}
-        >
+        <section style={{ marginBottom: 48 }}>
+          <h2
+            style={{
+              fontWeight: "bold",
+              fontSize: 22,
+              color: "#fff",
+              marginBottom: 16,
+              textAlign: "center",
+            }}
+          >
+            Aksara Lampung
+          </h2>
           <div style={{ maxWidth: 800, margin: "0 auto" }}>
-            <p style={{ marginBottom: 24, textAlign: "justify" }}>
+            <p style={{ color: "#fff", marginBottom: 24, lineHeight: 1.8, textAlign: "justify", fontSize: "16px" }}>
               Salah satu hal paling istimewa dari Bahasa Lampung adalah kepemilikan aksara tradisionalnya sendiri yang disebut 
-              Aksara Lampung atau Had Lampung. Aksara ini merupakan turunan dari aksara Brahmi kuno dari India, yang menyebar ke 
-              Nusantara dan berkerabat dengan aksara Batak dan Rejang.
+              Aksara Lampung atau Had Lampung. Aksara ini merupakan turunan dari aksara Brahmi kuno dari India, yang menyebar 
+              ke Nusantara dan berkerabat dengan aksara Batak dan Rejang.
             </p>
-            <div style={{ textAlign: "center" }}>
-              <img
-                src={aksaraLampungImg}
-                alt="Contoh Aksara Lampung"
-                style={{
-                  maxWidth: 800,
-                  width: "100%",
-                  borderRadius: 8,
-                  marginBottom: 24,
-                }}
-              />
-            </div>
+            <img
+              src={aksaraLampungImg}
+              alt="Aksara Lampung"
+              style={{
+                width: "100%",
+                maxWidth: 800,
+                margin: "0 auto",
+                display: "block",
+                borderRadius: 8,
+              }}
+            />
           </div>
         </section>
 
-        {/* Bahasa Lampung */}
-        <section
-          style={{
-            padding: 24,
-            marginBottom: 48,
-            color: "#fff",
-          }}
-        >
+        {/* Ketik Aksara Lampung Interaktif */}
+        <section style={{ marginBottom: 48 }}>
           <h2
             style={{
               fontWeight: "bold",
@@ -165,9 +152,6 @@ const LanguageAndFoodLampung = () => {
           >
             Coba Ketik Aksara Lampung
           </h2>
-          <p style={{ textAlign: "center", color: "#fff", marginBottom: 18 }}>
-            Gunakan fitur interaktif di bawah ini untuk menulis dan mengonversi kata/kalimat ke Aksara Lampung secara langsung!
-          </p>
           <div
             style={{
               display: "flex",
@@ -177,7 +161,6 @@ const LanguageAndFoodLampung = () => {
               borderRadius: 12,
               background: "rgba(255,255,255,0.1)",
               backdropFilter: "blur(10px)",
-              marginBottom: 8,
               overflow: "hidden",
               minHeight: 520,
               height: "auto",
@@ -191,29 +174,29 @@ const LanguageAndFoodLampung = () => {
               style={{
                 border: "none",
                 borderRadius: 12,
-                background: "#fff",
+                background: "transparent",
                 minHeight: 520,
                 width: "100%",
               }}
               allowFullScreen
             />
           </div>
-          
         </section>
 
         {/* Kuliner Lampung */}
         <section>
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <img 
-              src="/food_font.png"
-              alt="Food"
-              style={{
-                maxWidth: "300px",
-                width: "100%",
-                height: "auto",
-              }}
-            />
-          </div>
+          <h2
+            style={{
+              fontWeight: "bold",
+              fontSize: 42,
+              color: "#fff",
+              marginBottom: 40,
+              textAlign: "center",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+            }}
+          >
+            Food:
+          </h2>
           <div
             style={{
               display: "grid",
@@ -252,17 +235,17 @@ const LanguageAndFoodLampung = () => {
                   fontWeight: "bold",
                   fontSize: 20,
                   marginBottom: 8,
-                  fontFamily: "'Playfair Display', serif",
                 }}
               >
                 Seruit
               </h3>
-              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}>
+              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6 }}>
                 Ikan bakar yang disajikan dengan sambal terasi, tempoyak
                 (durian fermentasi), dan lalapan. Hidangan ini menjadi simbol
                 kebersamaan dalam adat Lampung.
               </p>
             </div>
+
             {/* Pindang */}
             <div
               style={{
@@ -293,17 +276,17 @@ const LanguageAndFoodLampung = () => {
                   fontWeight: "bold",
                   fontSize: 20,
                   marginBottom: 8,
-                  fontFamily: "'Playfair Display', serif",
                 }}
               >
                 Pindang
               </h3>
-              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}>
+              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6 }}>
                 Sup ikan khas Lampung dengan kuah asam pedas dan rempah-rempah
                 seperti serai, kunyit, dan daun jeruk. Cocok disantap hangat
                 bersama nasi putih.
               </p>
             </div>
+
             {/* Keripik Pisang */}
             <div
               style={{
@@ -334,12 +317,11 @@ const LanguageAndFoodLampung = () => {
                   fontWeight: "bold",
                   fontSize: 20,
                   marginBottom: 8,
-                  fontFamily: "'Playfair Display', serif",
                 }}
               >
                 Keripik Pisang
               </h3>
-              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}>
+              <p style={{ fontSize: 15, color: "#fff", lineHeight: 1.6 }}>
                 Camilan renyah khas Lampung yang terbuat dari irisan pisang yang digoreng
                 hingga kering. Tersedia dalam berbagai varian rasa yang menggugah selera.
               </p>
