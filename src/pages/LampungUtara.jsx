@@ -1,6 +1,6 @@
 import React from "react";
 
-const LampungTengah = () => {
+const LampungUtara = () => {
   return (
     <div className="min-h-screen bg-white">
       
@@ -10,7 +10,7 @@ const LampungTengah = () => {
         {/* Judul utama */}
         <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-8 tracking-wider uppercase text-[#b31217]"
             style={{ fontFamily: "'Cinzel', serif" }}>
-          Lampung Tengah
+          Lampung Utara
         </h1>
 
 {/* Ganti grid 2x2 dengan 1 gambar saja */}
@@ -119,4 +119,4 @@ const LampungTengah = () => {
   );
 };
 
-export default LampungTengah;
+export default LampungUtara;
