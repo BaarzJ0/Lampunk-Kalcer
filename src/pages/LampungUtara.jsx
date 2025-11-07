@@ -2,202 +2,119 @@ import React from "react";
 
 const LampungUtara = () => {
   return (
-    <div
-      style={{
-        maxWidth: 700,
-        margin: "40px auto",
-        fontFamily: "'Marcellus', serif",
-        color: "#222",
-        lineHeight: 1.7,
-        padding: "0 16px",
-        background: "#fff",
-        borderRadius: 12,
-        boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
-      }}
-    >
-      {/* Judul kecil di atas */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 13,
-          letterSpacing: "0.15em",
-          marginBottom: 8,
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontWeight: 600,
-        }}
-      >
-        Lampung Utara
-      </p>
+    <div className="min-h-screen bg-white">
+      
+      {/* Container dengan padding responsive */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        
+        {/* Judul utama */}
+        <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-8 tracking-wider uppercase text-[#b31217]"
+            style={{ fontFamily: "'Cinzel', serif" }}>
+          Lampung Utara
+        </h1>
 
-      {/* Judul utama */}
-      <h1
-        style={{
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 26,
-          marginBottom: 24,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        Welcome to Lampung Utara
-      </h1>
+{/* Ganti grid 2x2 dengan 1 gambar saja */}
+<div className="w-full mb-12 lg:mb-16">
+  <div className="overflow-hidden rounded-lg">
+    <img 
+      src="/TuguLumut.png" 
+      alt="Lampung Tengah Collage"
+      className="w-full h-auto object-cover"
+    />
+  </div>
+</div>
 
-      {/* Gambar utama */}
-      <div style={{ textAlign: "center", marginBottom: 12 }}>
-        <img
-          src="/TuguLamut.png"
-          alt="The Gold Spear Monument"
-          style={{
-            maxWidth: "100%",
-            height: "auto",
-            borderRadius: 8,
-            boxShadow: "0 2px 12px rgba(179,18,23,0.10)",
-          }}
-        />
-      </div>
 
-      {/* Caption gambar */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 16,
-          fontWeight: 500,
-          marginBottom: 32,
-          color: "#b31217",
-        }}
-      >
-        The Gold Spear Monument (Tugu Lamut)
-      </p>
-
-      {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif"}}>
-        Lampung Utara adalah salah satu kabupaten tertua di Provinsi Lampung, dikenal sebagai "Gerbang Sumatera Selatan". Wilayah ini kaya akan sejarah, budaya, dan keindahan alam. Tugu Lamut sebagai ikon kota menggambarkan semangat dan kejayaan masyarakat Lampung Utara.
-      </p>
-
-      {/* The Culture */}
-      <h2
-        style={{
-          fontSize: 18,
-          fontWeight: 600,
-          color: "#b31217",
-          marginBottom: 16,
-          letterSpacing: "0.05em",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        The Culture
-      </h2>
-
-      {/* Baris 1: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-start",
-        }}
-      >
-        <img
-          src="/TarianRaja.png"
-          alt="Tarian Raja"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
+        {/* Deskripsi List - Responsive */}
         <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tarian Raja
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Tarian Raja adalah tarian tradisional yang biasanya dipentaskan dalam upacara adat dan penyambutan tamu kehormatan. Gerakannya anggun dan penuh makna, melambangkan kebesaran dan keagungan budaya Lampung Utara.
-          </p>
-        </div>
+  <h2 style={{ fontSize: 40, textAlign: "center", marginBottom: 12,}}>
+    The Gold Spear Monument
+  </h2>
+  <p style={{ fontSize: 20, textAlign: "center", maxWidth: 1000, margin: "0 auto" }}>
+    Lampung Utara dikenal memiliki masyarakat yang terbuka (sakay-sambayan) dan menerima keberagaman suku pendatang (Jawa, Sunda, dll.) yang berbaur dengan suku asli Lampung Abung.
+  </p>
+</div>
+
+
       </div>
 
-      {/* Baris 2: teks kiri, gambar kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-end",
-        }}
-      >
-        <div style={{ textAlign: "right", maxWidth: 260,  }}>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Upacara Pepadun
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Upacara Pepadun adalah prosesi adat untuk mengangkat seseorang menjadi pemimpin adat (penyimbang). Upacara ini sarat dengan nilai-nilai demokrasi, musyawarah, dan gotong royong.
-          </p>
+      {/* The Culture Section - Full width dengan background */}
+      <div className="min-h-screen bg-[#DEDEDC]">
+        
+        {/* Header */}
+        <div className="py-8 sm:py-12 lg:py-16">
+          <div className="flex items-center justify-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-wide text-center">
+              THE CULTURE
+            </h1>
+          </div>
         </div>
-        <img
-          src="/UpacaraPepadun.png"
-          alt="Upacara Pepadun"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
+
+        {/* Section 1: Tarian Raja */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-right">
+                Tarian Raja
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-1 md:order-2">
+              <img 
+                src="/TarianRaja.png" 
+                alt="Tarian Raja" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        {/* Section 2: Upacara Pepadun */}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-1">
+              <img 
+                src="/UpacaraPepadun.png" 
+                alt="Upacara Pepadun" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-left">
+                Upacara Pepadun
+              </h2>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Section 3: Terapang*/}
+        <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            
+            <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-gray-900 text-center md:text-right">
+                Terampang
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start order-1 md:order-2">
+              <img 
+                src="/Terapang.png" 
+                alt="Terapang" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      {/* Baris 3: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          justifyContent: "flex-start",
-          marginBottom: 40,
-        }}
-      >
-        <img
-          src="/Terapang.png"
-          alt="Terapang"
-          style={{
-            width: 80,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Terapang
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Terapang adalah keris khas Lampung Utara yang menjadi simbol keberanian dan kehormatan. Senjata tradisional ini sering digunakan dalam upacara adat dan diwariskan secara turun-temurun.
-          </p>
-        </div>
-      </div>
-
-      {/* Penutup */}
-      <p
-        style={{
-          fontSize: 15,
-          color: "#b31217",
-          fontStyle: "italic",
-          textAlign: "center",
-          marginBottom: 24,
-          fontFamily: "'Poppins', sans-serif",
-        }}
-      >
-        Lampung Utara, tanah penuh sejarah, budaya, dan harmoni.
-      </p>
     </div>
   );
 };

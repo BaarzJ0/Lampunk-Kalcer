@@ -2,204 +2,162 @@ import React from "react";
 
 const LampungSelatan = () => {
   return (
-    <div
-      style={{
-        maxWidth: 700,
-        margin: "40px auto",
-        fontFamily: "'Marcellus', serif",
-        color: "#222",
-        lineHeight: 1.7,
-        padding: "0 16px",
-        background: "#fff",
-        borderRadius: 12,
-        boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
-      }}
+    <div className="min-h-screen bg-white">
+      {/* Container dengan padding responsive */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        {/* Judul utama */}
+        <h1
+          className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-8 tracking-wider uppercase text-[#b31217]"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
+          Lampung Selatan
+        </h1>
+
+        {/* The Siger Landmark */}
+        <h2 style={{ fontSize: 29, textAlign: "center", marginBottom: 12 }}>
+          The Siger Landmark
+        </h2>
+        <div className="w-full mb-12 lg:mb-16">
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src="/menara_siger.png"
+              alt="Menara siger"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Deskripsi Menara Siger */}
+        <div>
+          <p
+            style={{
+              fontSize: 20,
+              textAlign: "center",
+              maxWidth: 1000,
+              marginBottom: 100,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            Menara Siger adalah replika megah dari Siger, mahkota pengantin wanita
+            khas Lampung. Dengan sembilan lekukan yang menjulang, menara ini bukan
+            sekadar bangunan, melainkan simbol identitas, kehormatan, dan kemuliaan
+            bagi seluruh masyarakat Lampung.
+          </p>
+        </div>
+
+        {/* Gambar Pelabuhan */}
+        <div className="w-full mb-12 lg:mb-16">
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src="/pelabuhan.png"
+              alt="Pelabuhan"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Deskripsi Pelabuhan */}
+        <div>
+          <p
+            style={{
+              fontSize: 20,
+              textAlign: "center",
+              maxWidth: 1000,
+              marginTop: 7,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            Bakauheni adalah sebuah kota di bagian selatan Provinsi Lampung,
+            Indonesia, dan merupakan pelabuhan terbesar dan tersibuk di provinsi ini,
+            sekaligus salah satu pelabuhan tersibuk di Indonesia. Feri yang
+            mengangkut penumpang dan kendaraan, terutama truk besar, menghubungkan
+            Bakauheni dengan Pelabuhan Merak di Jawa melalui Selat Sunda.
+          </p>
+        </div>
+      </div>
+
+      {/* The Culture Section - Full width dengan background abu-abu */}
+      <div className="min-h-screen bg-[#d3d3d3] py-12 px-4">
+        {/* Judul THE CULTURE dengan warna merah gelap dan font Cinzel */}
+        <h1
+          className="text-center text-4xl font-serif mb-8 uppercase tracking-wide"
+          style={{ color: "#b31217", fontFamily: "'Cinzel', serif" }}
+        >
+          THE CULTURE
+        </h1>
+
+       <p
+  className="text-center mb-10"
+  style={{ fontFamily: "'Marcellus', serif", fontSize: "25px" }}
+>
+  Teluk kiluan the heavens of dolphin
+</p>
+
+{/* Gambar utama */}
+<div className="flex justify-center mb-16">
+  <img
+    src="/teluk_kiluan.png"
+    alt="Dolphins in Teluk Kiluan"
+    className="max-w-4xl w-full h-auto object-cover rounded"
+  />
+</div>
+
+{/* Judul kecil Tarian Lampung Selatan */}
+<h2
+  className="text-center mb-10 uppercase tracking-wide"
+  style={{ fontFamily: "'Marcellus', serif", fontSize: "20px" }}
+>
+  TARIAN LAMPUNG SELATAN
+</h2>
+
+{/* Grid 2 gambar atas */}
+<div className="flex justify-center gap-16 mb-16 max-w-5xl mx-auto">
+  <div className="text-center">
+    <img
+      src="/tuping.png"
+      alt="Tarian Tupping"
+      className="w-56 h-auto object-cover rounded"
+    />
+    <p
+      className="mt-6"
+      style={{ fontFamily: "'Marcellus', serif", fontSize: "18px" }}
     >
-      {/* Judul kecil di atas */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 13,
-          letterSpacing: "0.15em",
-          marginBottom: 8,
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontWeight: 600,
-        }}
-      >
-        Lampung Selatan
-      </p>
+      Tarian Tupping
+    </p>
+  </div>
+  <div className="text-center">
+    <img
+      src="/tari-sigeh.png"
+      alt="Tarian Sigeh Pengunten"
+      className="w-56 h-auto object-cover rounded"
+    />
+    <p
+      className="mt-6"
+      style={{ fontFamily: "'Marcellus', serif", fontSize: "18px" }}
+    >
+      Tarian Sigeh Pengunten
+    </p>
+  </div>
+</div>
 
-      {/* Judul utama */}
-      <h1
-        style={{
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 26,
-          marginBottom: 24,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        Welcome to Lampung Selatan
-      </h1>
+{/* Gambar bawah tengah */}
+<div className="max-w-3xl mx-auto text-center">
+  <img
+    src="/tari-halibambang.png"
+    alt="Tarian Halibambang"
+    className="w-72 h-auto object-cover rounded mx-auto block"
+  />
+  <p
+    className="mt-6"
+    style={{ fontFamily: "'Marcellus', serif", fontSize: "20px", fontWeight: "600" }}
+  >
+    Tarian Halibambang
+  </p>
+</div>
 
-      {/* Gambar utama */}
-      <div style={{ textAlign: "center", marginBottom: 12 }}>
-        <img
-          src="/menara-siger.png"
-          alt="Menara Siger"
-          style={{
-            maxWidth: "100%",
-            height: "auto",
-            borderRadius: 8,
-            boxShadow: "0 2px 12px rgba(179,18,23,0.10)",
-          }}
-        />
       </div>
-
-      {/* Caption gambar */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 16,
-          fontWeight: 500,
-          marginBottom: 32,
-          color: "#b31217",
-        }}
-      >
-        Menara Siger
-      </p>
-
-      {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
-        Lampung Selatan adalah kabupaten yang terletak di ujung selatan Provinsi Lampung dan dikenal sebagai "Gerbang Pulau Sumatera". Daerah ini memiliki peranan penting sebagai pintu masuk utama melalui Pelabuhan Bakauheni yang ikonik. Selain kekayaan sejarah dan peran strategisnya, Lampung Selatan juga terkenal akan keindahan alamnya, warisan budaya, dan kearifan lokal masyarakat pesisir. Dari ikon legendaris seperti Menara Siger hingga tradisi adat yang masih lestari, Lampung Selatan memancarkan semangat keterbukaan, keberagaman, dan kemajuan masyarakat Lampung selatan masa kini.
-      </p>
-
-      {/* The Culture */}
-      <h2
-        style={{
-          fontSize: 18,
-          fontWeight: 600,
-          color: "#b31217",
-          marginBottom: 16,
-          letterSpacing: "0.05em",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        The Culture
-      </h2>
-
-      {/* Baris 1: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-start",
-        }}
-      >
-        <img
-          src="/tari-sigeh.png"
-          alt="Tari Sigeh"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tarian Sigeh
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Tari Sigeh adalah tarian tradisional khas Lampung yang dipentaskan untuk menyambut tamu kehormatan dan dalam upacara adat. Gerakannya yang anggun dan lembut melambangkan penghormatan, keramahan, dan kegembiraan masyarakat Lampung dalam menerima tamu.
-          </p>
-        </div>
-      </div>
-
-      {/* Baris 2: teks kiri, gambar kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-end",
-        }}
-      >
-        <div style={{ textAlign: "right", maxWidth: 260 }}>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tari Halibambang
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif"}}>
-          Tari Halibambang adalah tarian tradisional Lampung, khususnya dari masyarakat adat Saibatin (Sekala Brak). Nama "Halibambang" berarti "kupu-kupu", dan tarian ini menggambarkan gerakan anggun kupu-kupu yang terbang. Tarian ini melambangkan kesopanan, keindahan, dan keagungan gadis Lampung, yang awalnya dipentaskan dalam pesta adat dan pernikahan.
-          </p>
-        </div>
-        <img
-          src="/tari-halibambang.png"
-          alt="Tari Halibambang"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-      </div>
-
-      {/* Baris 3: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          justifyContent: "flex-start",
-          marginBottom: 40,
-        }}
-      >
-        <img
-          src="/tuping.png"
-          alt="Tuping"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tuping
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Tari Tuping adalah drama tari tradisional dari Lampung Selatan yang menggunakan topeng (disebut tupping). Tarian ini awalnya menggambarkan 12 pasukan gerilya Pahlawan Radin Intan II yang menyamar untuk melawan penjajah. Gerakannya teatrikal dan gagah, melambangkan semangat patriotisme dan kepahlawanan.
-
-          </p>
-        </div>
-      </div>
-
-      {/* Penutup */}
-      <p
-        style={{
-          fontSize: 15,
-          color: "#b31217",
-          fontStyle: "italic",
-          textAlign: "center",
-          marginBottom: 24,
-          fontFamily: "'Poppins', sans-serif"
-        }}
-      >
-        
-        Lampung Selatan, tanah sang gerbang Sumatera, penuh pesona bahari dan warisan adat.
-      </p>
     </div>
   );
 };
