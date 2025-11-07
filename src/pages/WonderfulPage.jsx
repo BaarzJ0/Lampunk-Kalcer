@@ -47,6 +47,10 @@ const WonderfulLampung = () => {
       <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontFamily: 'Poppins, sans-serif'}}>
         Lampung tidak hanya kaya akan budaya, tetapi juga dianugerahi keindahan alam yang spektakuler. Dari puncak gunung berapi legendaris hingga kawanan lumba-lumba di teluk tersembunyi, "Sai Bumi Rwa Jurai" menawarkan pengalaman tak terlupakan.
       </p>
+      <p style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontFamily: 'Poppins, sans-serif'}}>
+        Page Wonderdul Lampung ini akan mengenalkan keapada Anda tentang destinasi paling terkenal yang wajib Anda jelajahi untuk mengenal pesona Lampung seutuhnya.
+      </p>
+
 
       {/* Gambar utama */}
       <div style={{ textAlign: "center", marginBottom: 40 }} className ="py-20 px-5 md:px-55">
@@ -54,7 +58,7 @@ const WonderfulLampung = () => {
           src={gajah}
           alt="Gajah"
           style={{
-            maxWidth: "100%",
+            maxWidth: "200%",
             borderRadius: 8,
             boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
           }}
@@ -108,7 +112,7 @@ const WonderfulLampung = () => {
             Pengalaman magis berburu fajar dengan perahu Jukung (perahu tradisional) untuk menyaksikan ratusan lumba-lumba hitam hidung botol dan lumba-lumba paruh panjang melompat bebas di lautan lepas. Laguna Geyu (Laguna Tersembunyi) menawarkan tempat berenang pribadi dengan pemandangan laut lepas.
           </p>
         </div>
-        <div style={{ flex: "1 1 300px" }}>
+        <div style={{ flex: "1 1 80px" }}>
           <img
             src={telukKiluan}
             alt="Lumba-lumba di Teluk Kiluan"
@@ -151,7 +155,7 @@ const WonderfulLampung = () => {
             Menjelajahi berbagai spot foto bawah laut, termasuk gugusan dan candi buatan yang kini menjadi rumah bagi ikan-ikan hias.
           </p>
         </div>
-        <div style={{ flex: "1 1 300px" }}>
+        <div style={{ flex: "1 1 80px" }}>
           <img
             src={pulauPahawang}
             alt="Pantai Pulau Pahawang"
@@ -175,6 +179,25 @@ const WonderfulLampung = () => {
         }}
       >
         <div style={{ flex: "1 1 300px" }}>
+          <h3
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              fontFamily: "'Cinzel', serif",
+              color: "#000000",
+              marginBottom: 12,
+            }}
+          >
+            Gunung Anak Krakatau
+          </h3>
+          <p style={{ lineHeight: 1.6, marginBottom: 12, fontFamily: 'Poppins, sans-serif'}}>
+            Nama "Krakatau" telah melegenda di seluruh dunia berkat letusan dahsyatnya pada tahun 1883. Kini, "Anak Krakatau" berdiri sebagai saksi hidup sejarah tersebut. Pulau vulkanik yang masih sangat aktif ini terletak di Selat Sunda. Mengunjungi Krakatau (dari jarak aman) adalah pengalaman sekali seumur hidup untuk menyaksikan kekuatan alam yang membentuk dunia.
+          </p>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif' }} >
+            Gunung ini berlayar mengelilingi kaldera dan (jika kondisi aman dan diizinkan) mendaki di pulau vulkanik yang lahir dari salah satu bencana alam terbesar dalam sejarah manusia.
+          </p>
+        </div>
+        <div style={{ flex: "1 1 80px" }}>
           <img
             src={anakKrakatau}
             alt="Gunung Anak Krakatau"
@@ -184,22 +207,6 @@ const WonderfulLampung = () => {
               boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
             }}
           />
-        </div>
-        <div style={{ flex: "1 1 300px" }}>
-          <h3
-            style={{
-              fontWeight: "bold",
-              fontSize: 18,
-              fontFamily: "'Cinzel', serif",
-              color: "#272323",
-              marginBottom: 12,
-            }}
-          >
-            Gunung Anak Krakatau
-          </h3>
-          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif' }}>
-            Nama "Anak Krakatau" berarti "anak gunung Krakatau" yang muncul dari letusan dahsyat Gunung Krakatau pada tahun 1883. Gunung ini terus tumbuh dan menjadi simbol kekuatan alam yang luar biasa di Selat Sunda.
-          </p>
         </div>
       </section>
 
@@ -215,17 +222,6 @@ const WonderfulLampung = () => {
         }}
       >
         <div style={{ flex: "1 1 300px" }}>
-          <img
-            src={pantaiTanjungSetia}
-            alt="Pantai Tanjung Setia"
-            style={{
-              width: "100%",
-              borderRadius: 8,
-              boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
-            }}
-          />
-        </div>
-        <div style={{ flex: "1 1 300px" }}>
           <h3
             style={{
               fontWeight: "bold",
@@ -237,25 +233,30 @@ const WonderfulLampung = () => {
           >
             Pantai Tanjung Setia, Krui
           </h3>
-          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif'}}>
-            Terletak di Kabupaten Pesisir Barat, Pantai Tanjung Setia dikenal sebagai surga bagi peselancar dengan ombak besar dan pemandangan alam yang menakjubkan. Pantai ini juga menjadi tempat konservasi penyu yang penting.
+          <p style={{ lineHeight: 1.6, marginBottom: 12, fontFamily: 'Poppins, sans-serif'}}>
+            Terletak di Kabupaten Pesisir Barat, Pantai Tanjung Setia adalah surga bagi para peselancar dunia. Berhadapan langsung dengan Samudera Hindia, pantai ini dikenal memiliki salah satu ombak terbaik di dunia. Jauh dari keramaian, Krui menawarkan suasana pantai yang masih alami, lengkap dengan pohon kelapa dan ketenangan yang sempurna.
           </p>
+          <p style={{ lineHeight: 1.6, fontFamily: 'Poppins, sans-serif'}}>
+            Pantai ini dikenal memiliki ombak left-hand (kiri) yang panjang, tinggi, dan konsisten (terutama antara April-Oktober), menantang para peselancar profesional dari berbagai negara.
+          </p>
+        </div>
+        <div style={{ flex: "1 1 80px" }}>
+          <img
+            src={pantaiTanjungSetia}
+            alt="Pantai Tanjung Setia"
+            style={{
+              width: "100%",
+              borderRadius: 8,
+              boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
+            }}
+          />
         </div>
       </section>
 
+
       {/* Menara Siger */}
       <section style={{ marginBottom: 0 }}>
-        {/* <h3
-          style={{
-            fontWeight: "bold",
-            fontSize: 18,
-            fontFamily: "'Cinzel', serif",
-            color: "#810d11",
-            marginBottom: 12,
-          }}
-        >
-          Menara Siger
-        </h3> */}
+        
         <img
           src={menaraSiger}
           alt="Menara Siger"
@@ -267,9 +268,20 @@ const WonderfulLampung = () => {
             marginLeft: 250,
           }}
         />
-        <p style={{ lineHeight: 1.6, color: "#ffffff", fontFamily: 'Poppins, sans-serif' }}>
-          Menara Siger adalah landmark ikonik di Lampung yang melambangkan budaya dan sejarah daerah ini. Dengan arsitektur khas dan warna kuning cerah, menara ini menjadi simbol kebanggaan masyarakat Lampung.
-        </p>
+        <div className="max-w-4xl mx-auto px-4 pt-10 pb-6">
+        <h1 className="text-center text-2xl sm:text-3xl font-bold mb-5 text-[#FFFFFF]" style={{ fontFamily: "'Cinzel', serif" }}>
+          Menara Siger
+        </h1>
+        <div className="text-white space-y-4 text-gray-900 text-base text-center">
+          <p>
+            Menara Siger adalah landmark yang paling melambangkan Lampung. Berdiri megah di titik paling selatan Sumatera (Bakauheni), bangunan ini adalah hal pertama yang menyambut pengunjung yang datang melalui kapal feri. Arsitekturnya mengambil inspirasi penuh dari Siger, mahkota adat pengantin wanita Lampung, yang berwarna kuning keemasan.
+          </p>
+          <p>
+            Menara Siger Berfungsi sebagai penanda Titik Nol Kilometer Jalan Lintas Sumatera di bagian selatan, serta menjadi simbol "Selamat Datang di Tanah Lampung" dengan pemandangan Selat Sunda dan Pelabuhan Bakauheni dari ketinggian.  
+          </p>
+        </div>
+        
+      </div> 
       </section>
     </div>
   );
