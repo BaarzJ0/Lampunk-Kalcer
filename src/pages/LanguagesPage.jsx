@@ -79,19 +79,15 @@ const LanguageAndFoodLampung = () => {
           </p>
           <div
             style={{
-              background: "rgba(255,255,255,0.1)",
-              borderRadius: 8,
-              padding: 12,
-              marginBottom: 8,
-              overflowX: "auto",
-              backdropFilter: "blur(10px)",
+              maxWidth: "600px",
+              margin: "0 auto 8px auto",
             }}
           >
             <table style={{ width: "100%", fontSize: 15, borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ color: "#ffffff", fontWeight: "bold", borderBottom: "2px solid #ffffff" }}>
-                  <td style={{ padding: "6px 12px", textAlign: "left" }}>Indonesia</td>
-                  <td style={{ padding: "6px 12px", textAlign: "left" }}>Lampung</td>
+                  <td style={{ padding: "8px 16px", textAlign: "left", width: "50%" }}>Indonesia</td>
+                  <td style={{ padding: "8px 16px", textAlign: "left", width: "50%" }}>Lampung</td>
                 </tr>
               </thead>
               <tbody>
@@ -103,8 +99,8 @@ const LanguageAndFoodLampung = () => {
                       color: "#ffffff",
                     }}
                   >
-                    <td style={{ padding: "6px 12px" }}>{row.indo}</td>
-                    <td style={{ padding: "6px 12px" }}>{row.lampung}</td>
+                    <td style={{ padding: "8px 16px" }}>{row.indo}</td>
+                    <td style={{ padding: "8px 16px" }}>{row.lampung}</td>
                   </tr>
                 ))}
               </tbody>
@@ -173,27 +169,22 @@ const LanguageAndFoodLampung = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              border: "2px solid rgba(255,255,255,0.2)",
-              borderRadius: 12,
-              background: "rgba(255,255,255,0.1)",
-              backdropFilter: "blur(10px)",
               marginBottom: 8,
               overflow: "hidden",
               minHeight: 520,
               height: "auto",
+              maxWidth: "800px",
+              margin: "0 auto",
             }}
           >
             <iframe
               src="https://meizano.github.io/ketikAksaraLampung/"
               title="Ketik Aksara Lampung"
-              width="100%"
-              height="520"
               style={{
                 border: "none",
-                borderRadius: 12,
-                background: "#fff",
-                minHeight: 520,
                 width: "100%",
+                height: "800px",
+                backgroundColor: "transparent",
               }}
               allowFullScreen
             />
