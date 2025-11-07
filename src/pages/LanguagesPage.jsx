@@ -22,7 +22,7 @@ const LanguageAndFoodLampung = () => {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(180deg, #EB5A5A 0%, #3C0F0F 20%, #3C0F0F 100%)",
+        backgroundColor: "#6B0F0F",
         fontFamily: "'Poppins', sans-serif",
         margin: 0,
         padding: 5,
@@ -40,6 +40,7 @@ const LanguageAndFoodLampung = () => {
         <div style={{ 
           textAlign: "center", 
           marginBottom: 12,
+          marginTop: -20,
           display: "flex",
           justifyContent: "center",
           width: "100%"
@@ -51,7 +52,7 @@ const LanguageAndFoodLampung = () => {
               maxWidth: "500px",
               width: "100%",
               height: "auto",
-              margin: "20px auto",
+              margin: "0 auto",
             }}
           />
         </div>
@@ -170,25 +171,32 @@ const LanguageAndFoodLampung = () => {
               justifyContent: "center",
               alignItems: "center",
               marginBottom: 8,
-              overflow: "hidden",
-              minHeight: 520,
-              height: "auto",
               maxWidth: "800px",
               margin: "0 auto",
+              background: "transparent",
             }}
           >
-            <iframe
-              src="https://meizano.github.io/ketikAksaraLampung/"
-              title="Ketik Aksara Lampung"
-              style={{
-                border: "none",
-                width: "100%",
-                height: "800px",
-                backgroundColor: "transparent",
-              }}
-              allowFullScreen
-              p
-            />
+            <div style={{
+              width: "100%",
+              height: "800px",
+              position: "relative",
+              overflow: "hidden",
+            }}>
+              <iframe
+                src="https://meizano.github.io/ketikAksaraLampung/"
+                title="Ketik Aksara Lampung"
+                style={{
+                  border: "none",
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  background: "transparent",
+                }}
+                allowFullScreen
+              />
+            </div>
           </div>
            <p
             style={{
