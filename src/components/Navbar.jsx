@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
+  { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/wonderful', label: 'Wonderful Lampung' },
   { to: '/languages', label: 'Languanges & Food' },
