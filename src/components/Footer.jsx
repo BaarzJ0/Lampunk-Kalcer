@@ -1,58 +1,78 @@
 import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/wonderful', label: 'Wonderful Lampung' },
-  { to: '/languages', label: 'Languanges & Food' },
+  { to: '/languages', label: 'Languages & Food' },
   { to: '/dresses', label: 'Dresses' },
+  { to: '/wonderful', label: 'Wonderful Lampung' },
+  { to: '/berita', label: 'News' },
   { to: '/video', label: 'Discover Video' },
-  { to: '/berita', label: 'Berita' },
-  { to: '/login', label: 'Login' }, // <-- Tambahkan ini
+  { to: '/login', label: 'Login' },
 ];
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#E3DC8F] to-[#7D794F] text-black py-8 px-6 border-t border-gray-400">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+    <footer className="w-full bg-[#D9D48B] border-t border-[#8B1E1E] py-6 px-12">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Kiri: Logo dan menu */}
-        <div className="flex-1 flex flex-col md:items-start">
-          <div className="text-3xl font-normal mb-2" style={{ fontFamily: 'Cinzel, serif' }}>
-            LAMPUNK KALCER
+        <div className="flex flex-col md:flex-row md:items-start gap-12">
+          <div>
+            <h1
+              className="font-serif text-3xl font-normal text-[#1A1A1A]"
+              style={{ letterSpacing: '0.03em' }}
+            >
+              LAMPUNK KALCER
+            </h1>
+            <h2
+              className="font-serif text-xl text-[#8B1E1E] tracking-widest mt-1"
+              style={{ letterSpacing: '0.3em' }}
+            >
+              OFFICIAL SITE
+            </h2>
           </div>
-          <div className="text-2xl tracking-widest mb-4" style={{ fontFamily: 'Cinzel, serif', letterSpacing: '0.2em', color: '#ffffff' }}>
-            OFFICIAL SITE
-          </div>
+
           {/* Menu */}
-          <div className="flex flex-wrap gap-x-8 gap-y-2 mb-4">
-            {navLinks.map((link) => (
+          <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm font-serif text-[#8B1E1E] max-w-lg">
+            {navLinks.slice(0, 6).map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-base hover:underline"
-                style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}
+                className="hover:underline"
               >
                 {link.label}
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
+
         {/* Garis vertikal */}
-        <div className="hidden md:block h-40 border-l border-gray-700 mx-8"></div>
-        {/* Kanan: Info */}
-        <div className="flex-1 flex flex-col items-start md:items-start mt-8 md:mt-0">
-          <div className="mb-4 text-sm" style={{ fontFamily: 'Cinzel, serif' }}>
+        <div className="hidden md:block h-24 border-1 border-[#8B1E1E] mx-12"></div>
+
+        {/* Kanan: Info dan ikon */}
+        <div className="flex flex-col items-end text-sm font-serif text-[#1A1A1A] max-w-md">
+          <p className="mb-4 text-right leading-relaxed">
             Copyright © Website produced by Culture’s Team of Group 3 LKMO 2025.<br />
             Content provided by Agency for Cultural Affairs. All Rights Reserved.
-          </div>
-          <div className="flex items-center gap-4">
-            {/* Logo crown */}
-            <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
-              <path d="M20 2L25 14L35 6L30 22H10L5 6L15 14L20 2Z" fill="#222" />
-            </svg>
+          </p>
+          <div className="flex items-center gap-6">
+            {/* Login Link */}
+            <Link
+              to="/login"
+              className="text-[#8B1E1E] hover:underline text-sm font-serif"
+            >
+              Login
+            </Link>
+
+            {/* Crown icon PNG */}
+            <img
+              src="/sigericon.png"
+              alt="Siger icon"
+              className="w-16 h-auto"
+            />
+
             {/* Bendera Indonesia */}
-            <div className="w-10 h-6 border border-gray-400">
-              <div className="w-full h-1/2 bg-red-600"></div>
+            <div className="w-12 h-7 border border-[#8B1E1E]">
+              <div className="w-full h-1/2 bg-red-700"></div>
               <div className="w-full h-1/2 bg-white"></div>
             </div>
           </div>
