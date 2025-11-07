@@ -2,202 +2,151 @@ import React from "react";
 
 const LampungTimur = () => {
   return (
-    <div
-      style={{
-        maxWidth: 700,
-        margin: "40px auto",
-        fontFamily: "'Marcellus', serif",
-        color: "#222",
-        lineHeight: 1.7,
-        padding: "0 16px",
-        background: "#fff",
-        borderRadius: 12,
-        boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
-      }}
-    >
-      {/* Judul kecil di atas */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 13,
-          letterSpacing: "0.15em",
-          marginBottom: 8,
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontWeight: 600,
-        }}
-      >
-        Lampung Timur
-      </p>
+    <div className="min-h-screen bg-white">
+      
+      {/* Section 1: Header & Welcome */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+          
+          {/* Judul Lampung Timur */}
+          <h1 
+            className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-12 tracking-wider uppercase text-[#b31217]"
+            style={{ fontFamily: "'Cinzel', serif" }}
+          >
+            Lampung Timur
+          </h1>
+          
+          {/* Welcome Title */}
+          <div className="mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light tracking-widest text-gray-900 uppercase">
+              Welcome to Lampung Timur
+            </h2>
+          </div>
 
-      {/* Judul utama */}
-      <h1
-        style={{
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 26,
-          marginBottom: 24,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#b31217",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        Welcome to Lampung Timur
-      </h1>
+          {/* Image & Title Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8 lg:mb-12">
+            
+            {/* Image Section - Left */}
+            <div className="w-full">
+              <img 
+                src="/gajah.png" 
+                alt="Sumatra's Elephant Sanctuary"
+                className="w-full h-auto object-cover shadow-lg"
+              />
+            </div>
 
-      {/* Gambar utama */}
-      <div style={{ textAlign: "center", marginBottom: 12 }}>
-        <img
-          src="/gajah.png"
-          alt="Sumatra's Elephant Sanctuary"
-          style={{
-            maxWidth: "100%",
-            height: "auto",
-            borderRadius: 8,
-            boxShadow: "0 2px 12px rgba(179,18,23,0.10)",
-          }}
-        />
-      </div>
+            {/* Title Section - Right */}
+            <div className="flex items-center justify-start h-full pt-8 lg:pt-16">
+              <h3 className="text-4xl sm:text-5xl lg:text-5xl font-serif text-gray-900 leading-tight">
+                Sumatra's<br />
+                Elephant<br />
+                Sanctuary
+              </h3>
+            </div>
 
-      {/* Caption gambar */}
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: 16,
-          fontWeight: 500,
-          marginBottom: 32,
-          color: "#b31217",
-        }}
-      >
-        Sumatra's Elephant Sanctuary
-      </p>
+          </div>
 
-      {/* Deskripsi singkat */}
-      <p style={{ fontSize: 15, marginBottom: 18, fontFamily: "'Poppins', sans-serif" }}>
-        Lampung Timur adalah kabupaten yang identik dengan konservasi alam, dikenal luas secara internasional sebagai "Benteng Konservasi Gajah Sumatera". Wilayah ini menjadi rumah bagi Taman Nasional Way Kambas, yang telah ditetapkan sebagai ASEAN Heritage Park.
-      </p>
+          {/* Description Paragraph */}
+          <div className="w-full max-w-5xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center leading-relaxed px-4">
+              Way Kambas telah ditetapkan sebagai Taman Warisan ASEAN (ASEAN Heritage Park), 
+              menunjukkan pentingnya kawasan ini dalam upaya konservasi di tingkat regional.
+            </p>
+          </div>
 
-      {/* The Culture */}
-      <h2
-        style={{
-          fontSize: 18,
-          fontWeight: 600,
-          color: "#b31217",
-          marginBottom: 16,
-          letterSpacing: "0.05em",
-          fontFamily: "'Cinzel', serif",
-        }}
-      >
-        The Culture
-      </h2>
-
-      {/* Baris 1: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-start",
-        }}
-      >
-        <img
-          src="/tari-melinting.png"
-          alt="Tari Melinting"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tari Melinting
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Tari Melinting adalah tarian klasik yang anggun dan luhur, warisan asli dari Keratuan Melinting di Lampung Timur. Tarian ini awalnya merupakan tarian istana yang sakral, dipentaskan hanya untuk menyambut tamu agung atau dalam upacara adat kerajaan. Dengan gerakan yang gemulai, kostum yang mewah, dan iringan musik tradisional, Tari Melinting memancarkan keagungan dan kekayaan budaya Pesisir Lampung.
-          </p>
         </div>
       </div>
 
-      {/* Baris 2: teks kiri, gambar kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginBottom: 32,
-          gap: 18,
-          justifyContent: "flex-end",
-        }}
-      >
-        <div style={{ textAlign: "right", maxWidth: 260 }}>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Tapis Melinting
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Tapis Melinting adalah kain tenun tradisional khas yang menjadi simbol kemewahan dan status sosial masyarakat adat Melinting. Dibuat dengan teknik sulam benang emas atau perak yang rumit di atas kain dasar tenun (seringkali berwarna gelap), tapis ini memiliki motif-motif kuno yang sarat makna, seperti motif alam dan kapal. 
-          </p>
+      {/* Section 2: The Culture - Full Background Abu-abu */}
+      <div className="bg-[#DEDEDC] py-12 px-4 sm:px-6 lg:px-8">
+        
+        {/* The Culture Header */}
+        <div className="max-w-5xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 text-center tracking-wide">
+            THE CULTURE
+          </h2>
         </div>
-        <img
-          src="/kain-tapis.png"
-          alt="Tapis Melinting"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
+
+        {/* Culture Cards */}
+        <div className="max-w-4xl mx-auto space-y-12 sm:space-y-16">
+          
+          {/* Card 1: Tari Melinting */}
+          <div className="flex flex-col items-center">
+            <div className="w-full mb-6">
+              <img 
+                src="/tari-melinting.png" 
+                alt="Tari Melinting"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-900 text-center">
+              Tari Melinting
+            </h3>
+          </div>
+
+          {/* Card 2: Tapis Melinting */}
+          <div className="flex flex-col items-center">
+            <div className="w-full mb-6">
+              <img 
+                src="/kain-tapis.png" 
+                alt="Tapis Melinting"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-900 text-center">
+              Tapis Melinting
+            </h3>
+          </div>
+
+        </div>
+
+        {/* Section 3: Other of Lampung Timur - Di dalam background abu-abu */}
+        <div className="max-w-5xl mx-auto mt-16 sm:mt-20 lg:mt-24">
+          
+          {/* Other Header - CENTERED */}
+          <div className="mb-12 sm:mb-16 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 tracking-wider">
+              OTHER OF LAMPUNG TIMUR
+            </h2>
+          </div>
+
+          {/* Other Cards */}
+          <div className="space-y-12 sm:space-y-16">
+            
+            {/* Card 1: Festival Lada dan Ruwat Desa */}
+            <div className="flex flex-col items-center">
+              <div className="w-full max-w-md mb-6">
+                <img 
+                  src="/festival-lada.png" 
+                  alt="Festival Lada dan Ruwat Desa"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-900 text-center">
+                Festival Lada dan Ruwat Desa
+              </h3>
+            </div>
+
+            {/* Card 2: Taman Nasional Way Kambas */}
+            <div className="flex flex-col items-center">
+              <div className="w-full max-w-500 mb-6">
+                <img 
+                  src="/gajah-way-kambas.png" 
+                  alt="Taman Nasional Way Kambas"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-900 text-center">
+                Taman Nasional Way Kambas
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      {/* Baris 3: gambar kiri, teks kanan */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          justifyContent: "flex-start",
-          marginBottom: 40,
-        }}
-      >
-        <img
-          src="/gajah-way-kambas.png"
-          alt="Gajay Way Kambas"
-          style={{
-            width: 160,
-            height: "auto",
-            borderRadius: 6,
-            boxShadow: "0 2px 8px rgba(179,18,23,0.10)",
-            flexShrink: 0,
-          }}
-        />
-        <div>
-          <h3 style={{ fontSize: 16, color: "#b31217", margin: 0, fontWeight: 600 }}>
-            Denyut Kehidupan Konservasi
-          </h3>
-          <p style={{ fontSize: 14, margin: "6px 0 0 0", fontFamily: "'Poppins', sans-serif" }}>
-            Di luar atraksi dan pusat pelatihan, jantung Way Kambas berdetak di alam liarnya. Taman nasional ini adalah habitat alami di mana kawanan gajah—termasuk anak-anak gajah yang menggemaskan—dapat hidup dan berkembang biak dengan relatif aman. Pemandangan keluarga gajah di habitatnya ini adalah bukti nyata keberhasilan upaya konservasi dan menjadi pengingat betapa pentingnya menjaga rumah bagi satwa-satwa langka Indonesia.
-          </p>
-        </div>
-      </div>
-
-      {/* Penutup */}
-      <p
-        style={{
-          fontSize: 15,
-          color: "#b31217",
-          fontStyle: "italic",
-          textAlign: "center",
-          marginBottom: 24,
-          fontFamily: "'Poppins', sans-serif",
-        }}
-      >
-        Lampung Timur, suaka sang gajah, warisan budaya, dan harmoni alam.
-      </p>
     </div>
   );
 };

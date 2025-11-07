@@ -5,7 +5,7 @@ const LampungUtara = () => {
     <div className="min-h-screen bg-white">
       
       {/* Container dengan padding responsive */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         
         {/* Judul utama */}
         <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-8 tracking-wider uppercase text-[#b31217]"
@@ -14,7 +14,7 @@ const LampungUtara = () => {
         </h1>
 
 {/* Ganti grid 2x2 dengan 1 gambar saja */}
-<div className="w-full mb-12 lg:mb-16">
+<div className="w-200 mb-12 lg:mb-16 ">
   <div className="overflow-hidden rounded-lg">
     <img 
       src="/TuguLumut.png" 
