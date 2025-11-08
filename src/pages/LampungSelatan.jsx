@@ -79,16 +79,18 @@ const LampungSelatan = () => {
       </div>
 
       {/* The Culture Section - Full width dengan background abu-abu */}
-      <div className="min-h-screen bg-[#d3d3d3] py-12 px-4">
-        {/* Judul THE CULTURE dengan warna merah gelap dan font Cinzel */}
-        <h1
-          className="text-center text-4xl font-serif mb-8 uppercase tracking-wide"
-          style={{ color: "#b31217", fontFamily: "'Cinzel', serif" }}
-        >
-          THE CULTURE
-        </h1>
+      <div className="min-h-screen bg-[#DEDEDC]">
+        
+        {/* Header */}
+        <div className="py-8 sm:py-12 lg:py-16">
+          <div className="flex items-center justify-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-wide text-center">
+              THE CULTURE
+            </h1>
+          </div>
+        </div>
 
-       <p
+      <p
   className="text-center mb-10"
   style={{ fontFamily: "'Marcellus', serif", fontSize: "25px" }}
 >
