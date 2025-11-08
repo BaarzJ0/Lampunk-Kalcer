@@ -1,9 +1,8 @@
 <?php
 
 // TAMBAHKAN 'USE' STATEMENTS INI DI BAGIAN ATAS
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\NewsController;
-use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\AuthController; // Ganti jika nama Controller Anda beda
+use App\Http\Controllers\NewsController; // Ganti jika nama Controller Anda beda
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +27,6 @@ Route::get('/news', [NewsController::class, 'index']);
 // Rute yang diproteksi (butuh token)
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/auth/logout', [AuthController::class, 'logout']);
-    Route::post('/gallery/upload', [GalleryController::class, 'upload']);
     
     // Ini adalah rute bawaan, biarkan saja
     Route::get('/user', function (Request $request) {
