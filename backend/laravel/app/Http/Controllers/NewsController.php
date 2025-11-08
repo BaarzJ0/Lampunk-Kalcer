@@ -2,48 +2,73 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\News; // Pastikan Anda punya model News
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
     /**
-     * Store a newly created resource in storage.
+     * Menyimpan berita baru ke database.
      */
     public function store(Request $request)
     {
-        // Validasi input (contoh sederhana)
-        $validatedData = $request->validate([
+        // 1. Validasi (termasuk validasi gambar)
+        $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi file
         ]);
 
-        // Buat berita baru
+        $imagePath = null;
+
+        // 2. Cek jika ada file gambar yang di-upload
+        if ($request->hasFile('image')) {
+            // 3. Simpan gambar ke 'storage/app/public/news_images'
+            // dan dapatkan path-nya (misal: "news_images/namafile.jpg")
+            $imagePath = $request->file('image')->store('news_images', 'public');
+        }
+
+        // 4. Buat berita di database
         $news = News::create([
-            'title' => $validatedData['title'],
-            'content' => $validatedData['content'],
-            // 'user_id' => auth()->id(), // Tambahkan ini jika berita terkait user
+            'user_id' => Auth::id(),
+            'title' => $request->title,
+            'content' => $request->content,
+            'image_path' => $imagePath, // 5. Simpan path gambar
         ]);
 
-        // Kirim balasan sukses
+        // 6. (PENTING) Tambahkan URL lengkap ke data yang dikembalikan
+        // Ini agar React tahu URL gambarnya
+        if ($imagePath) {
+            $news->image_url = asset('storage/' . $imagePath);
+        }
+
         return response()->json([
             'message' => 'Berita berhasil dibuat',
-            'data' => $news
-        ], 201); // 201 Created
+            'data' => $news // Kirim data lengkap (termasuk image_url)
+        ], 201);
     }
 
+    /**
+     * Menampilkan semua data berita.
+     */
     public function index()
     {
-        // 1. Ambil semua berita dari database, urutkan dari yang terbaru
         $news = News::latest()->get();
 
-        // 2. Kembalikan data sebagai JSON
+        // 7. Ubah data untuk menyertakan URL gambar lengkap
+        $news->each(function($item) {
+            if ($item->image_path) {
+                // Ini akan menghasilkan URL: http://127.0.0.1:8000/storage/news_images/namafile.jpg
+                $item->image_url = asset('storage/' . $item->image_path);
+            } else {
+                $item->image_url = null; // Tidak ada gambar
+            }
+        });
+
         return response()->json([
             'message' => 'Data berita berhasil diambil',
             'data' => $news
         ], 200);
     }
-
-    // Method lain (index, show, update, destroy)
-    // ...
 }

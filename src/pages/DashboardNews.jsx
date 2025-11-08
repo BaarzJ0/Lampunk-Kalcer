@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaHome, FaNewspaper, FaImages } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
@@ -100,6 +100,7 @@ const DashboardNews = () => {
     content: "",
     image: null,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -127,24 +128,46 @@ const DashboardNews = () => {
       return;
     }
 
+    // Debug: pastikan handler terpanggil
+    console.debug('DashboardNews.handleSubmit called', { formData });
+
     // 5. Siapkan data yang akan dikirim ke API
-    const apiData = {
-      title: formData.title,
-      content: formData.content,
+    // Jika ada gambar, gunakan FormData (multipart/form-data)
+    let payload;
+    let headers = {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/json'
     };
 
+    if (formData.image) {
+      payload = new FormData();
+      payload.append('title', formData.title);
+      payload.append('content', formData.content);
+      payload.append('image', formData.image);
+      // Let axios set the correct Content-Type with boundary
+      // but we'll indicate multipart via browser automatically
+    } else {
+      payload = {
+        title: formData.title,
+        content: formData.content,
+      };
+      headers['Content-Type'] = 'application/json';
+    }
+
+    // (previous stray request removed) -- now continue to try/catch block below
+
     try {
+      setIsSubmitting(true);
       // 6. Kirim data ke API Laravel Anda dengan header otentikasi
       const response = await axios.post(
         'http://127.0.0.1:8000/api/news', // URL API Anda
-        apiData, // Body (data yang dikirim)
+        payload, // Body (data yang dikirim)
         {
-          headers: {
-            'Authorization': `Bearer ${token}`, // Header wajib untuk rute terproteksi
-            'Accept': 'application/json'
-          }
+          headers,
         }
       );
+
+      console.debug('DashboardNews.create response', response);
 
       // 7. Jika sukses, API akan mengembalikan data berita yang baru dibuat
       alert('Berita berhasil disimpan ke database!');
@@ -159,11 +182,19 @@ const DashboardNews = () => {
     } catch (error) {
       // 10. Tangani jika ada error
       console.error('Error saat membuat berita:', error);
-      if (error.response && error.response.status === 401) {
-        alert("Sesi Anda habis. Silakan login kembali.");
+      if (error.response) {
+        const status = error.response.status;
+        const serverMsg = error.response.data && (error.response.data.message || JSON.stringify(error.response.data));
+        if (status === 401) {
+          alert(serverMsg || "Sesi Anda habis. Silakan login kembali.");
+        } else {
+          alert(serverMsg || "Terjadi kesalahan. Gagal menyimpan berita.");
+        }
       } else {
-        alert("Terjadi kesalahan. Gagal menyimpan berita.");
+        alert("Terjadi kesalahan jaringan. Coba lagi.");
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
   // --- BATAS AKHIR PERUBAHAN ---
@@ -236,8 +267,8 @@ const DashboardNews = () => {
               </label>
 
               <div className="flex gap-4">
-                <button type="submit" className="bg-[#bfa046] text-white px-4 py-2 rounded hover:bg-[#a68f3a] transition">
-                  Simpan
+                <button type="submit" disabled={isSubmitting} aria-busy={isSubmitting} className="bg-[#bfa046] text-white px-4 py-2 rounded hover:bg-[#a68f3a] transition" >
+                  {isSubmitting ? 'Menyimpan...' : 'Simpan'}
                 </button>
                 <button type="button" onClick={handleReset} className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 transition">
                   Reset
