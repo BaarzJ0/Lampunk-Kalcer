@@ -78,40 +78,67 @@ const Header = () => {
 // Komponen Utama DashboardNews
 const DashboardNews = () => {
   // Ini adalah daftar berita "dummy" Anda. Kita akan tambahkan data asli ke sini
-  const [newsList, setNewsList] = useState([
-    {
-      id: 1,
-      title: "Lampung Utara melakukan kolaborasi dengan Mahasiswa ITERA",
-      date: "10 Juni 2025",
-      content: "Kolaborasi berhasil dilakukan",
-    },
-    {
-      id: 2,
-      title: "Lampung Utara melakukan kolaborasi dengan Mahasiswa ITERA",
-      date: "10 Juni 2025",
-      content: "Kolaborasi berhasil dilakukan",
-    },
-  ]);
+  const [newsList, setNewsList] = useState([]);
+  const [loadingNews, setLoadingNews] = useState(true);
 
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
     date: "", // Ini tetap ada untuk form, tapi tidak kita kirim ke API news
     content: "",
-    image: null,
   });
+  const [editingId, setEditingId] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "image") {
-      setFormData((prev) => ({ ...prev, image: files[0] }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleAddNewClick = () => setShowForm((prev) => !prev);
+
+  const handleEditClick = (news) => {
+    setEditingId(news.id);
+    setFormData({
+      title: news.title || "",
+      date: news.date || "",
+      content: news.content || "",
+    });
+    setShowForm(true);
+    // scroll to top of form
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setFormData({ title: "", date: "", content: "" });
+    setShowForm(false);
+  };
+
+  const handleDelete = async (news) => {
+    const ok = window.confirm(`Hapus berita "${news.title}"? Tindakan ini tidak bisa dibatalkan.`);
+    if (!ok) return;
+
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+      alert('Token otentikasi tidak ditemukan. Silakan login kembali.');
+      return;
+    }
+
+    try {
+      // gunakan DELETE ke endpoint resource
+      await axios.delete(`http://127.0.0.1:8000/api/news/${news.id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+
+      // hapus dari state
+      setNewsList((prev) => prev.filter((n) => n.id !== news.id));
+      alert('Berita berhasil dihapus.');
+    } catch (err) {
+      console.error('Gagal menghapus berita:', err);
+      alert('Gagal menghapus berita. Cek console untuk detail.');
+    }
+  };
 
   // --- 3. FUNGSI INI DIGANTI TOTAL ---
   const handleSubmit = async (e) => {
@@ -131,52 +158,36 @@ const DashboardNews = () => {
     // Debug: pastikan handler terpanggil
     console.debug('DashboardNews.handleSubmit called', { formData });
 
-    // 5. Siapkan data yang akan dikirim ke API
-    // Jika ada gambar, gunakan FormData (multipart/form-data)
-    let payload;
-    let headers = {
-      'Authorization': `Bearer ${token}`,
-      'Accept': 'application/json'
+    // 5. Siapkan data yang akan dikirim ke API (tanpa gambar)
+    const payload = {
+      title: formData.title,
+      content: formData.content,
     };
-
-    if (formData.image) {
-      payload = new FormData();
-      payload.append('title', formData.title);
-      payload.append('content', formData.content);
-      payload.append('image', formData.image);
-      // Let axios set the correct Content-Type with boundary
-      // but we'll indicate multipart via browser automatically
-    } else {
-      payload = {
-        title: formData.title,
-        content: formData.content,
-      };
-      headers['Content-Type'] = 'application/json';
-    }
-
-    // (previous stray request removed) -- now continue to try/catch block below
+    const headers = {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    };
 
     try {
       setIsSubmitting(true);
-      // 6. Kirim data ke API Laravel Anda dengan header otentikasi
-      const response = await axios.post(
-        'http://127.0.0.1:8000/api/news', // URL API Anda
-        payload, // Body (data yang dikirim)
-        {
-          headers,
-        }
-      );
+      let response;
+      if (editingId) {
+        // update existing
+        response = await axios.put(`http://127.0.0.1:8000/api/news/${editingId}`, payload, { headers });
+        setNewsList((prev) => prev.map((n) => (n.id === editingId ? response.data.data : n)));
+        alert('Berita berhasil diperbarui.');
+        setEditingId(null);
+      } else {
+        // create new
+        response = await axios.post('http://127.0.0.1:8000/api/news', payload, { headers });
+        console.debug('DashboardNews.create response', response);
+        alert('Berita berhasil disimpan ke database!');
+        setNewsList((prev) => [response.data.data, ...prev]);
+      }
 
-      console.debug('DashboardNews.create response', response);
-
-      // 7. Jika sukses, API akan mengembalikan data berita yang baru dibuat
-      alert('Berita berhasil disimpan ke database!');
-      
-      // 8. Tambahkan berita baru (dari server) ke daftar berita di state
-      setNewsList((prev) => [response.data.data, ...prev]);
-      
-      // 9. Reset form dan sembunyikan
-      setFormData({ title: "", date: "", content: "", image: null });
+      // Reset form dan sembunyikan
+      setFormData({ title: "", date: "", content: "" });
       setShowForm(false);
 
     } catch (error) {
@@ -199,7 +210,28 @@ const DashboardNews = () => {
   };
   // --- BATAS AKHIR PERUBAHAN ---
 
-  const handleReset = () => setFormData({ title: "", date: "", content: "", image: null });
+  const handleReset = () => setFormData({ title: "", date: "", content: "" });
+
+  // Fetch news from backend when component mounts
+  useEffect(() => {
+    let mounted = true;
+    const fetchNews = async () => {
+      try {
+        setLoadingNews(true);
+        const res = await axios.get('http://127.0.0.1:8000/api/news');
+        // backend returns { message, data: [ ... ] }
+        const items = res.data && (res.data.data || res.data);
+        if (mounted) setNewsList(items || []);
+      } catch (err) {
+        console.error('Gagal memuat daftar berita:', err);
+      } finally {
+        if (mounted) setLoadingNews(false);
+      }
+    };
+
+    fetchNews();
+    return () => { mounted = false };
+  }, []);
 
   return (
     <div className="flex min-h-screen bg-[#f0ead2]">
@@ -215,7 +247,7 @@ const DashboardNews = () => {
 
           {showForm && (
             <form onSubmit={handleSubmit} className="mb-8 border border-blue-500 p-6 rounded bg-white max-w-xl">
-              <h4 className="mb-4 font-semibold">Tambah Berita Baru</h4>
+              <h4 className="mb-4 font-semibold">{editingId ? 'Edit Berita' : 'Tambah Berita Baru'}</h4>
 
               <label className="block mb-2">
                 Judul Berita
@@ -255,41 +287,49 @@ const DashboardNews = () => {
                 />
               </label>
 
-              <label className="block mb-4">
-                Pilih Gambar
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  onChange={handleInputChange}
-                  className="w-full mt-1"
-                />
-              </label>
+              
 
               <div className="flex gap-4">
                 <button type="submit" disabled={isSubmitting} aria-busy={isSubmitting} className="bg-[#bfa046] text-white px-4 py-2 rounded hover:bg-[#a68f3a] transition" >
-                  {isSubmitting ? 'Menyimpan...' : 'Simpan'}
+                  {isSubmitting ? (editingId ? 'Menyimpan...' : 'Menyimpan...') : (editingId ? 'Update' : 'Simpan')}
                 </button>
                 <button type="button" onClick={handleReset} className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 transition">
                   Reset
                 </button>
+                {editingId && (
+                  <button type="button" onClick={handleCancelEdit} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
+                    Cancel Edit
+                  </button>
+                )}
               </div>
             </form>
           )}
 
           <section>
             <h4 className="mb-4 font-semibold">NEWS LIST</h4>
-            <div className="space-y-4 max-w-3xl">
+            <div className="space-y-4 w-full">
               {newsList.map((news) => (
-                <div key={news.id} className="bg-white p-4 rounded shadow flex gap-4">
+                <div
+                  key={news.id}
+                  className="bg-white p-4 rounded shadow w-full"
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '96px 1fr auto',
+                    gap: '1rem',
+                    alignItems: 'start'
+                  }}
+                >
                   <div className="w-24 flex-shrink-0 bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-600">
-                    {/* Jika ada gambar, tampilkan gambar. Jika tidak, tampilkan ID */}
-                    {news.image ? "Gambar" : `News ${news.id}`}
+                    {`News ${news.id}`}
                   </div>
-                  <div>
+                  <div style={{ overflowWrap: 'break-word' }}>
                     <h5 className="font-semibold">{news.title}</h5>
-                    <p className="text-xs text-gray-500">{news.date || new Date(news.created_at).toLocaleDateString('id-ID')}</p>
-                    <p className="text-sm">{news.content}</p>
+                    <p className="text-xs text-gray-500">{news.date || (news.created_at ? new Date(news.created_at).toLocaleDateString('id-ID') : '')}</p>
+                    <p className="text-sm text-gray-700">{news.content}</p>
+                  </div>
+                  <div className="flex flex-col gap-2 items-end ml-4">
+                    <button onClick={() => handleEditClick(news)} className="text-sm bg-yellow-400 px-3 py-1 rounded hover:bg-yellow-500">Edit</button>
+                    <button onClick={() => handleDelete(news)} className="text-sm bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
                   </div>
                 </div>
               ))}

@@ -12,6 +12,7 @@ import DressesPage from './pages/DressesPage';
 import VideoPage from './pages/VideoPage';
 import RegionPage from './pages/RegionPage';
 import Berita from './pages/Berita';
+import SearchResults from './pages/SearchResults';
 
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -45,6 +46,7 @@ function AppContent() {
         <Route path="/dresses" element={<DressesPage />} />
         <Route path="/video" element={<VideoPage />} />
         <Route path="/berita" element={<Berita />} />
+  <Route path="/search" element={<SearchResults />} />
         <Route path="/region/:regionName" element={<RegionPage />} />
         <Route path="/lampung-utara" element={<LampungUtara />} />
 

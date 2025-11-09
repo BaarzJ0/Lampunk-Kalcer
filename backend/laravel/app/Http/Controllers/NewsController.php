@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -70,5 +71,63 @@ class NewsController extends Controller
             'message' => 'Data berita berhasil diambil',
             'data' => $news
         ], 200);
+    }
+
+    /**
+     * Update berita existing.
+     */
+    public function update(Request $request, $id)
+    {
+        $news = News::find($id);
+        if (!$news) {
+            return response()->json(['message' => 'Berita tidak ditemukan'], 404);
+        }
+
+        // Pastikan user yang mengubah adalah pemilik atau terotentikasi
+        // (opsional) cek kepemilikan jika diperlukan
+
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // jika ada file gambar baru, simpan dan hapus yang lama
+        if ($request->hasFile('image')) {
+            // hapus file lama bila ada
+            if ($news->image_path) {
+                Storage::disk('public')->delete($news->image_path);
+            }
+
+            $imagePath = $request->file('image')->store('news_images', 'public');
+            $news->image_path = $imagePath;
+            $news->image_url = asset('storage/' . $imagePath);
+        }
+
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->save();
+
+        return response()->json(["message" => 'Berita berhasil diperbarui', 'data' => $news], 200);
+    }
+
+    /**
+     * Hapus berita.
+     */
+    public function destroy($id)
+    {
+        $news = News::find($id);
+        if (!$news) {
+            return response()->json(['message' => 'Berita tidak ditemukan'], 404);
+        }
+
+        // hapus file gambar di storage jika ada
+        if ($news->image_path) {
+            Storage::disk('public')->delete($news->image_path);
+        }
+
+        $news->delete();
+
+        return response()->json(['message' => 'Berita berhasil dihapus'], 200);
     }
 }

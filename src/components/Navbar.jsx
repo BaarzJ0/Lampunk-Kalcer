@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/wonderful', label: 'Wonderful Lampung' },
-  { to: '/languages', label: 'Languanges & Food' },
+  { to: '/languages', label: 'Languages & Food' },
   { to: '/dresses', label: 'Dresses' },
   { to: '/video', label: 'Discover Video' },
   { to: '/berita', label: 'News' },
@@ -17,10 +17,13 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  const navigate = useNavigate();
+
   const handleSearch = () => {
-    if (searchTerm.trim()) {
-      alert(`Mencari: ${searchTerm}\nFitur pencarian akan segera tersedia!`);
-    }
+    const q = searchTerm.trim();
+    if (!q) return;
+    // Navigate to search results page with query param
+    navigate(`/search?q=${encodeURIComponent(q)}`);
   };
 
   return (
@@ -38,7 +41,7 @@ const Navbar = () => {
           {/* Judul */}
           <div className="mb-4 md:mb-0">
             <div className="text-[3rem] leading-[2.8rem] font-normal text-black select-none">
-              LAMPUNK
+              LAMPUNG
             </div>
             <div className="text-[3rem] leading-[2.8rem] font-normal text-[#9B2226] -mt-2 select-none">
               KALCER
@@ -49,7 +52,7 @@ const Navbar = () => {
             <div className="relative w-full md:w-[420px]">
               <input
                 type="text"
-                placeholder="Cari tempat di sini...."
+                placeholder="Cari artikel di sini...."
                 className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-full bg-[#FFF9E3] shadow focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all"
                 style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem' }}
                 value={searchTerm}

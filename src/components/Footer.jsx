@@ -21,7 +21,7 @@ const Footer = () => {
               className="font-serif text-3xl font-normal text-[#1A1A1A]"
               style={{ letterSpacing: '0.03em' }}
             >
-              LAMPUNK KALCER
+              LAMPUNG KALCER
             </h1>
             <h2
               className="font-serif text-xl text-[#8B1E1E] tracking-widest mt-1"

@@ -13,10 +13,10 @@ const Berita = () => {
   useEffect(() => {
     const fetchNews = async () => {
       setIsLoading(true);
-      try {
-        // Panggil API GET /api/news
-        const response = await axios.get('http://127.0.0.1:8000/api/news');
-        setBeritaList(response.data.data); // Simpan data ke state
+  try {
+  // Panggil API GET /api/news
+  const response = await axios.get('http://127.0.0.1:8000/api/news');
+  setBeritaList(response.data.data); // Simpan data ke state
       } catch (error) {
         console.error('Gagal mengambil data berita:', error);
       }
@@ -26,6 +26,8 @@ const Berita = () => {
     fetchNews();
   }, []); // [] berarti "jalankan fungsi ini sekali saja"
 
+  // (no image resolution — show placeholder only)
+
   // 4. Tampilan (JSX)
   return (
     <div className="min-h-screen bg-white px-6 py-12">
@@ -34,7 +36,7 @@ const Berita = () => {
           className="text-4xl font-bold mb-2 text-[#800000]"
           style={{ fontFamily: 'Cinzel, serif' }}
         >
-          Agenda Kegiatan Budaya
+          Artikel Budaya
         </h1>
         <div className="h-1 w-24 bg-[#bfa046] mb-10 rounded"></div>
 
@@ -51,14 +53,9 @@ const Berita = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
               style={{ border: '1px solid #e5e7eb' }}
             >
-              {/* Karena kita belum simpan gambar, kita beri placeholder */}
-              <div className="h-56 w-full bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500" style={{ fontFamily: 'Cinzel, serif' }}>
-                  Gambar (Segera)
-                </span>
-              </div>
+              {/* gambar dihilangkan — tidak ditampilkan */}
               
-              <div className="p-6 flex flex-col flex-1">
+              <div className="p-4 flex flex-col flex-1">
                 <div className="text-xs text-gray-500 mb-2" style={{ fontFamily: 'Cinzel, serif' }}>
                   {/* Gunakan tanggal 'created_at' dari database */}
                   {new Date(berita.created_at).toLocaleDateString('id-ID')}
@@ -80,6 +77,7 @@ const Berita = () => {
                 >
                   Baca Selengkapnya
                 </button>
+                {/* (no debug link) */}
               </div>
             </div>
           ))}
@@ -95,8 +93,8 @@ const Berita = () => {
             }}
             onClick={() => setSelectedBerita(null)}
           >
-            <div
-              className="bg-white rounded-xl shadow-xl max-w-lg w-full p-8 relative"
+              <div
+              className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative"
               style={{ fontFamily: 'Cinzel, serif' }}
               onClick={e => e.stopPropagation()}
             >
@@ -108,10 +106,7 @@ const Berita = () => {
                 &times;
               </button>
               
-              {/* Placeholder gambar modal */}
-              <div className="rounded-lg mb-4 w-full h-56 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Gambar (Segera)</span>
-              </div>
+              {/* gambar modal dihilangkan */}
 
               <div className="text-xs text-gray-500 mb-2">
                 {new Date(selectedBerita.created_at).toLocaleDateString('id-ID')}

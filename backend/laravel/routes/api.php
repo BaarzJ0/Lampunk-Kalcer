@@ -36,4 +36,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Rute untuk News (berita)
     Route::post('/news', [NewsController::class, 'store']); // Rute dari instruksi Anda
     // Tambahkan rute lain di sini (get, update, delete news)
+    // Update & delete untuk news (diproteksi)
+    Route::put('/news/{id}', [NewsController::class, 'update']);
+    Route::delete('/news/{id}', [NewsController::class, 'destroy']);
 });
