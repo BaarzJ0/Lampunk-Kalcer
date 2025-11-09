@@ -188,14 +188,14 @@ backend/laravel/
 
 | Nama                    | NIM           | Role                    |
 |------------------------|---------------|-------------------------|
-| [Keira Lakeisha Fachra Fuady]       | [123140142]        | Project Manager         |
-| [Muhammad Fadhilah Akbar]       | [123140003]        | Frontend Developer      |
-| [Louis Hutabarat]       | [123140052]        | Frontend Developer      |
-| [Anisah Octa Rohila]       | [123140137]        | Backend Developer       |
-| [M. Arif Ardani]       | [12314086]        | Backend Developer       |
-| [Silvia]       | [123140133]        | Backend Developer       |
-| [M. Daffa Hakim Matondang]       | [123140002]        | UI/UX Designer          |
-| [Najwa Syahirah Rosyan]       | [123140178]        | UI/UX Designer          |
+| Keira Lakeisha Fachra Fuady       | 123140142        | Project Manager         |
+| Muhammad Fadhilah Akbar       | 123140003        | Frontend Developer      |
+| Louis Hutabarat       | 123140052        | Frontend Developer      |
+| Anisah Octa Rohila       | 123140137        | Backend Developer       |
+| M. Arif Ardani       | 12314086        | Backend Developer       |
+| Silvia       | 123140133        | Backend Developer       |
+| M. Daffa Hakim Matondang       | 123140002        | UI/UX Designer          |
+| Najwa Syahirah Rosyan       | 123140178        | UI/UX Designer          |
 
 ## Lisensi
 
